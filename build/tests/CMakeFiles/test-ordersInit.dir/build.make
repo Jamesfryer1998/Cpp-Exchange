@@ -93,7 +93,7 @@ test__ordersInit_EXTERNAL_OBJECTS =
 tests/test-ordersInit: tests/CMakeFiles/test-ordersInit.dir/TestOrders.cpp.o
 tests/test-ordersInit: tests/CMakeFiles/test-ordersInit.dir/build.make
 tests/test-ordersInit: lib/libgtest_main.a
-tests/test-ordersInit: exchange-platform/ordersInit/libordersInit.a
+tests/test-ordersInit: ordersInit/libordersInit.a
 tests/test-ordersInit: lib/libgtest.a
 tests/test-ordersInit: tests/CMakeFiles/test-ordersInit.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test-ordersInit"

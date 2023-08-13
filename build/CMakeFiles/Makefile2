@@ -64,28 +64,28 @@ CMAKE_BINARY_DIR = /Users/james/Projects/exchange/build
 
 # The main recursive "all" target.
 all: _deps/googletest-build/all
-all: exchange-platform/exchangeInit/all
+all: exchangeInit/all
+all: ordersInit/all
+all: usersInit/all
 all: main/all
-all: exchange-platform/ordersInit/all
-all: exchange-platform/usersInit/all
 all: tests/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: _deps/googletest-build/preinstall
-preinstall: exchange-platform/exchangeInit/preinstall
+preinstall: exchangeInit/preinstall
+preinstall: ordersInit/preinstall
+preinstall: usersInit/preinstall
 preinstall: main/preinstall
-preinstall: exchange-platform/ordersInit/preinstall
-preinstall: exchange-platform/usersInit/preinstall
 preinstall: tests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: _deps/googletest-build/clean
-clean: exchange-platform/exchangeInit/clean
+clean: exchangeInit/clean
+clean: ordersInit/clean
+clean: usersInit/clean
 clean: main/clean
-clean: exchange-platform/ordersInit/clean
-clean: exchange-platform/usersInit/clean
 clean: tests/clean
 .PHONY : clean
 
@@ -141,55 +141,25 @@ _deps/googletest-build/googletest/clean: _deps/googletest-build/googletest/CMake
 .PHONY : _deps/googletest-build/googletest/clean
 
 #=============================================================================
-# Directory level rules for directory exchange-platform/exchangeInit
+# Directory level rules for directory exchangeInit
 
 # Recursive "all" directory target.
-exchange-platform/exchangeInit/all: exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/all
-.PHONY : exchange-platform/exchangeInit/all
+exchangeInit/all: exchangeInit/CMakeFiles/exchangeInit.dir/all
+.PHONY : exchangeInit/all
 
 # Recursive "preinstall" directory target.
-exchange-platform/exchangeInit/preinstall:
-.PHONY : exchange-platform/exchangeInit/preinstall
+exchangeInit/preinstall:
+.PHONY : exchangeInit/preinstall
 
 # Recursive "clean" directory target.
-exchange-platform/exchangeInit/clean: exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/clean
-.PHONY : exchange-platform/exchangeInit/clean
-
-#=============================================================================
-# Directory level rules for directory exchange-platform/ordersInit
-
-# Recursive "all" directory target.
-exchange-platform/ordersInit/all: exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/all
-.PHONY : exchange-platform/ordersInit/all
-
-# Recursive "preinstall" directory target.
-exchange-platform/ordersInit/preinstall:
-.PHONY : exchange-platform/ordersInit/preinstall
-
-# Recursive "clean" directory target.
-exchange-platform/ordersInit/clean: exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/clean
-.PHONY : exchange-platform/ordersInit/clean
-
-#=============================================================================
-# Directory level rules for directory exchange-platform/usersInit
-
-# Recursive "all" directory target.
-exchange-platform/usersInit/all: exchange-platform/usersInit/CMakeFiles/usersInit.dir/all
-.PHONY : exchange-platform/usersInit/all
-
-# Recursive "preinstall" directory target.
-exchange-platform/usersInit/preinstall:
-.PHONY : exchange-platform/usersInit/preinstall
-
-# Recursive "clean" directory target.
-exchange-platform/usersInit/clean: exchange-platform/usersInit/CMakeFiles/usersInit.dir/clean
-.PHONY : exchange-platform/usersInit/clean
+exchangeInit/clean: exchangeInit/CMakeFiles/exchangeInit.dir/clean
+.PHONY : exchangeInit/clean
 
 #=============================================================================
 # Directory level rules for directory main
 
 # Recursive "all" directory target.
-main/all: main/CMakeFiles/main.dir/all
+main/all: main/CMakeFiles/exchange-app.dir/all
 .PHONY : main/all
 
 # Recursive "preinstall" directory target.
@@ -197,36 +167,23 @@ main/preinstall:
 .PHONY : main/preinstall
 
 # Recursive "clean" directory target.
-main/clean: main/CMakeFiles/Experimental.dir/clean
-main/clean: main/CMakeFiles/Nightly.dir/clean
-main/clean: main/CMakeFiles/Continuous.dir/clean
-main/clean: main/CMakeFiles/NightlyMemoryCheck.dir/clean
-main/clean: main/CMakeFiles/NightlyStart.dir/clean
-main/clean: main/CMakeFiles/NightlyUpdate.dir/clean
-main/clean: main/CMakeFiles/NightlyConfigure.dir/clean
-main/clean: main/CMakeFiles/NightlyBuild.dir/clean
-main/clean: main/CMakeFiles/NightlyTest.dir/clean
-main/clean: main/CMakeFiles/NightlyCoverage.dir/clean
-main/clean: main/CMakeFiles/NightlyMemCheck.dir/clean
-main/clean: main/CMakeFiles/NightlySubmit.dir/clean
-main/clean: main/CMakeFiles/ExperimentalStart.dir/clean
-main/clean: main/CMakeFiles/ExperimentalUpdate.dir/clean
-main/clean: main/CMakeFiles/ExperimentalConfigure.dir/clean
-main/clean: main/CMakeFiles/ExperimentalBuild.dir/clean
-main/clean: main/CMakeFiles/ExperimentalTest.dir/clean
-main/clean: main/CMakeFiles/ExperimentalCoverage.dir/clean
-main/clean: main/CMakeFiles/ExperimentalMemCheck.dir/clean
-main/clean: main/CMakeFiles/ExperimentalSubmit.dir/clean
-main/clean: main/CMakeFiles/ContinuousStart.dir/clean
-main/clean: main/CMakeFiles/ContinuousUpdate.dir/clean
-main/clean: main/CMakeFiles/ContinuousConfigure.dir/clean
-main/clean: main/CMakeFiles/ContinuousBuild.dir/clean
-main/clean: main/CMakeFiles/ContinuousTest.dir/clean
-main/clean: main/CMakeFiles/ContinuousCoverage.dir/clean
-main/clean: main/CMakeFiles/ContinuousMemCheck.dir/clean
-main/clean: main/CMakeFiles/ContinuousSubmit.dir/clean
-main/clean: main/CMakeFiles/main.dir/clean
+main/clean: main/CMakeFiles/exchange-app.dir/clean
 .PHONY : main/clean
+
+#=============================================================================
+# Directory level rules for directory ordersInit
+
+# Recursive "all" directory target.
+ordersInit/all: ordersInit/CMakeFiles/ordersInit.dir/all
+.PHONY : ordersInit/all
+
+# Recursive "preinstall" directory target.
+ordersInit/preinstall:
+.PHONY : ordersInit/preinstall
+
+# Recursive "clean" directory target.
+ordersInit/clean: ordersInit/CMakeFiles/ordersInit.dir/clean
+.PHONY : ordersInit/clean
 
 #=============================================================================
 # Directory level rules for directory tests
@@ -248,13 +205,28 @@ tests/clean: tests/CMakeFiles/test-usersInit.dir/clean
 .PHONY : tests/clean
 
 #=============================================================================
+# Directory level rules for directory usersInit
+
+# Recursive "all" directory target.
+usersInit/all: usersInit/CMakeFiles/usersInit.dir/all
+.PHONY : usersInit/all
+
+# Recursive "preinstall" directory target.
+usersInit/preinstall:
+.PHONY : usersInit/preinstall
+
+# Recursive "clean" directory target.
+usersInit/clean: usersInit/CMakeFiles/usersInit.dir/clean
+.PHONY : usersInit/clean
+
+#=============================================================================
 # Target rules for target _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
 _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=3,4 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=5,6 "Built target gmock"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -281,7 +253,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletes
 _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=5,6 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=7,8 "Built target gmock_main"
 .PHONY : _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -307,7 +279,7 @@ _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=7,8 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=9,10 "Built target gtest"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -333,7 +305,7 @@ _deps/googletest-build/googletest/CMakeFiles/gtest.dir/clean:
 _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=9,10 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=11,12 "Built target gtest_main"
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -353,836 +325,110 @@ _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean:
 .PHONY : _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/clean
 
 #=============================================================================
-# Target rules for target exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir
+# Target rules for target exchangeInit/CMakeFiles/exchangeInit.dir
 
 # All Build rule for target.
-exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/all:
-	$(MAKE) $(MAKESILENT) -f exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/build.make exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/depend
-	$(MAKE) $(MAKESILENT) -f exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/build.make exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=1,2 "Built target exchangeInit"
-.PHONY : exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/all
+exchangeInit/CMakeFiles/exchangeInit.dir/all:
+	$(MAKE) $(MAKESILENT) -f exchangeInit/CMakeFiles/exchangeInit.dir/build.make exchangeInit/CMakeFiles/exchangeInit.dir/depend
+	$(MAKE) $(MAKESILENT) -f exchangeInit/CMakeFiles/exchangeInit.dir/build.make exchangeInit/CMakeFiles/exchangeInit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=3,4 "Built target exchangeInit"
+.PHONY : exchangeInit/CMakeFiles/exchangeInit.dir/all
 
 # Build rule for subdir invocation for target.
-exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/rule: cmake_check_build_system
+exchangeInit/CMakeFiles/exchangeInit.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exchangeInit/CMakeFiles/exchangeInit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/rule
+.PHONY : exchangeInit/CMakeFiles/exchangeInit.dir/rule
 
 # Convenience name for target.
-exchangeInit: exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/rule
+exchangeInit: exchangeInit/CMakeFiles/exchangeInit.dir/rule
 .PHONY : exchangeInit
 
 # clean rule for target.
-exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/build.make exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/clean
-.PHONY : exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/clean
+exchangeInit/CMakeFiles/exchangeInit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f exchangeInit/CMakeFiles/exchangeInit.dir/build.make exchangeInit/CMakeFiles/exchangeInit.dir/clean
+.PHONY : exchangeInit/CMakeFiles/exchangeInit.dir/clean
 
 #=============================================================================
-# Target rules for target main/CMakeFiles/Experimental.dir
+# Target rules for target ordersInit/CMakeFiles/ordersInit.dir
 
 # All Build rule for target.
-main/CMakeFiles/Experimental.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Experimental.dir/build.make main/CMakeFiles/Experimental.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Experimental.dir/build.make main/CMakeFiles/Experimental.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target Experimental"
-.PHONY : main/CMakeFiles/Experimental.dir/all
+ordersInit/CMakeFiles/ordersInit.dir/all:
+	$(MAKE) $(MAKESILENT) -f ordersInit/CMakeFiles/ordersInit.dir/build.make ordersInit/CMakeFiles/ordersInit.dir/depend
+	$(MAKE) $(MAKESILENT) -f ordersInit/CMakeFiles/ordersInit.dir/build.make ordersInit/CMakeFiles/ordersInit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=13,14,15,16 "Built target ordersInit"
+.PHONY : ordersInit/CMakeFiles/ordersInit.dir/all
 
 # Build rule for subdir invocation for target.
-main/CMakeFiles/Experimental.dir/rule: cmake_check_build_system
+ordersInit/CMakeFiles/ordersInit.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ordersInit/CMakeFiles/ordersInit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/Experimental.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/Experimental.dir/rule
+.PHONY : ordersInit/CMakeFiles/ordersInit.dir/rule
 
 # Convenience name for target.
-Experimental: main/CMakeFiles/Experimental.dir/rule
-.PHONY : Experimental
-
-# clean rule for target.
-main/CMakeFiles/Experimental.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Experimental.dir/build.make main/CMakeFiles/Experimental.dir/clean
-.PHONY : main/CMakeFiles/Experimental.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/Nightly.dir
-
-# All Build rule for target.
-main/CMakeFiles/Nightly.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Nightly.dir/build.make main/CMakeFiles/Nightly.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Nightly.dir/build.make main/CMakeFiles/Nightly.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target Nightly"
-.PHONY : main/CMakeFiles/Nightly.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/Nightly.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/Nightly.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/Nightly.dir/rule
-
-# Convenience name for target.
-Nightly: main/CMakeFiles/Nightly.dir/rule
-.PHONY : Nightly
-
-# clean rule for target.
-main/CMakeFiles/Nightly.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Nightly.dir/build.make main/CMakeFiles/Nightly.dir/clean
-.PHONY : main/CMakeFiles/Nightly.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/Continuous.dir
-
-# All Build rule for target.
-main/CMakeFiles/Continuous.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Continuous.dir/build.make main/CMakeFiles/Continuous.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Continuous.dir/build.make main/CMakeFiles/Continuous.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target Continuous"
-.PHONY : main/CMakeFiles/Continuous.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/Continuous.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/Continuous.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/Continuous.dir/rule
-
-# Convenience name for target.
-Continuous: main/CMakeFiles/Continuous.dir/rule
-.PHONY : Continuous
-
-# clean rule for target.
-main/CMakeFiles/Continuous.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/Continuous.dir/build.make main/CMakeFiles/Continuous.dir/clean
-.PHONY : main/CMakeFiles/Continuous.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyMemoryCheck.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyMemoryCheck.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemoryCheck.dir/build.make main/CMakeFiles/NightlyMemoryCheck.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemoryCheck.dir/build.make main/CMakeFiles/NightlyMemoryCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyMemoryCheck"
-.PHONY : main/CMakeFiles/NightlyMemoryCheck.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyMemoryCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyMemoryCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyMemoryCheck.dir/rule
-
-# Convenience name for target.
-NightlyMemoryCheck: main/CMakeFiles/NightlyMemoryCheck.dir/rule
-.PHONY : NightlyMemoryCheck
-
-# clean rule for target.
-main/CMakeFiles/NightlyMemoryCheck.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemoryCheck.dir/build.make main/CMakeFiles/NightlyMemoryCheck.dir/clean
-.PHONY : main/CMakeFiles/NightlyMemoryCheck.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyStart.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyStart.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyStart.dir/build.make main/CMakeFiles/NightlyStart.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyStart.dir/build.make main/CMakeFiles/NightlyStart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyStart"
-.PHONY : main/CMakeFiles/NightlyStart.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyStart.dir/rule
-
-# Convenience name for target.
-NightlyStart: main/CMakeFiles/NightlyStart.dir/rule
-.PHONY : NightlyStart
-
-# clean rule for target.
-main/CMakeFiles/NightlyStart.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyStart.dir/build.make main/CMakeFiles/NightlyStart.dir/clean
-.PHONY : main/CMakeFiles/NightlyStart.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyUpdate.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyUpdate.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyUpdate.dir/build.make main/CMakeFiles/NightlyUpdate.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyUpdate.dir/build.make main/CMakeFiles/NightlyUpdate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyUpdate"
-.PHONY : main/CMakeFiles/NightlyUpdate.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyUpdate.dir/rule
-
-# Convenience name for target.
-NightlyUpdate: main/CMakeFiles/NightlyUpdate.dir/rule
-.PHONY : NightlyUpdate
-
-# clean rule for target.
-main/CMakeFiles/NightlyUpdate.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyUpdate.dir/build.make main/CMakeFiles/NightlyUpdate.dir/clean
-.PHONY : main/CMakeFiles/NightlyUpdate.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyConfigure.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyConfigure.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyConfigure.dir/build.make main/CMakeFiles/NightlyConfigure.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyConfigure.dir/build.make main/CMakeFiles/NightlyConfigure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyConfigure"
-.PHONY : main/CMakeFiles/NightlyConfigure.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyConfigure.dir/rule
-
-# Convenience name for target.
-NightlyConfigure: main/CMakeFiles/NightlyConfigure.dir/rule
-.PHONY : NightlyConfigure
-
-# clean rule for target.
-main/CMakeFiles/NightlyConfigure.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyConfigure.dir/build.make main/CMakeFiles/NightlyConfigure.dir/clean
-.PHONY : main/CMakeFiles/NightlyConfigure.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyBuild.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyBuild.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyBuild.dir/build.make main/CMakeFiles/NightlyBuild.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyBuild.dir/build.make main/CMakeFiles/NightlyBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyBuild"
-.PHONY : main/CMakeFiles/NightlyBuild.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyBuild.dir/rule
-
-# Convenience name for target.
-NightlyBuild: main/CMakeFiles/NightlyBuild.dir/rule
-.PHONY : NightlyBuild
-
-# clean rule for target.
-main/CMakeFiles/NightlyBuild.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyBuild.dir/build.make main/CMakeFiles/NightlyBuild.dir/clean
-.PHONY : main/CMakeFiles/NightlyBuild.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyTest.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyTest.dir/build.make main/CMakeFiles/NightlyTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyTest.dir/build.make main/CMakeFiles/NightlyTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyTest"
-.PHONY : main/CMakeFiles/NightlyTest.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyTest.dir/rule
-
-# Convenience name for target.
-NightlyTest: main/CMakeFiles/NightlyTest.dir/rule
-.PHONY : NightlyTest
-
-# clean rule for target.
-main/CMakeFiles/NightlyTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyTest.dir/build.make main/CMakeFiles/NightlyTest.dir/clean
-.PHONY : main/CMakeFiles/NightlyTest.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyCoverage.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyCoverage.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyCoverage.dir/build.make main/CMakeFiles/NightlyCoverage.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyCoverage.dir/build.make main/CMakeFiles/NightlyCoverage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyCoverage"
-.PHONY : main/CMakeFiles/NightlyCoverage.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyCoverage.dir/rule
-
-# Convenience name for target.
-NightlyCoverage: main/CMakeFiles/NightlyCoverage.dir/rule
-.PHONY : NightlyCoverage
-
-# clean rule for target.
-main/CMakeFiles/NightlyCoverage.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyCoverage.dir/build.make main/CMakeFiles/NightlyCoverage.dir/clean
-.PHONY : main/CMakeFiles/NightlyCoverage.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlyMemCheck.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlyMemCheck.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemCheck.dir/build.make main/CMakeFiles/NightlyMemCheck.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemCheck.dir/build.make main/CMakeFiles/NightlyMemCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlyMemCheck"
-.PHONY : main/CMakeFiles/NightlyMemCheck.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlyMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlyMemCheck.dir/rule
-
-# Convenience name for target.
-NightlyMemCheck: main/CMakeFiles/NightlyMemCheck.dir/rule
-.PHONY : NightlyMemCheck
-
-# clean rule for target.
-main/CMakeFiles/NightlyMemCheck.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemCheck.dir/build.make main/CMakeFiles/NightlyMemCheck.dir/clean
-.PHONY : main/CMakeFiles/NightlyMemCheck.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/NightlySubmit.dir
-
-# All Build rule for target.
-main/CMakeFiles/NightlySubmit.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlySubmit.dir/build.make main/CMakeFiles/NightlySubmit.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlySubmit.dir/build.make main/CMakeFiles/NightlySubmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target NightlySubmit"
-.PHONY : main/CMakeFiles/NightlySubmit.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/NightlySubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlySubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/NightlySubmit.dir/rule
-
-# Convenience name for target.
-NightlySubmit: main/CMakeFiles/NightlySubmit.dir/rule
-.PHONY : NightlySubmit
-
-# clean rule for target.
-main/CMakeFiles/NightlySubmit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlySubmit.dir/build.make main/CMakeFiles/NightlySubmit.dir/clean
-.PHONY : main/CMakeFiles/NightlySubmit.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalStart.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalStart.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalStart.dir/build.make main/CMakeFiles/ExperimentalStart.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalStart.dir/build.make main/CMakeFiles/ExperimentalStart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalStart"
-.PHONY : main/CMakeFiles/ExperimentalStart.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalStart.dir/rule
-
-# Convenience name for target.
-ExperimentalStart: main/CMakeFiles/ExperimentalStart.dir/rule
-.PHONY : ExperimentalStart
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalStart.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalStart.dir/build.make main/CMakeFiles/ExperimentalStart.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalStart.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalUpdate.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalUpdate.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalUpdate.dir/build.make main/CMakeFiles/ExperimentalUpdate.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalUpdate.dir/build.make main/CMakeFiles/ExperimentalUpdate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalUpdate"
-.PHONY : main/CMakeFiles/ExperimentalUpdate.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalUpdate.dir/rule
-
-# Convenience name for target.
-ExperimentalUpdate: main/CMakeFiles/ExperimentalUpdate.dir/rule
-.PHONY : ExperimentalUpdate
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalUpdate.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalUpdate.dir/build.make main/CMakeFiles/ExperimentalUpdate.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalUpdate.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalConfigure.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalConfigure.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalConfigure.dir/build.make main/CMakeFiles/ExperimentalConfigure.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalConfigure.dir/build.make main/CMakeFiles/ExperimentalConfigure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalConfigure"
-.PHONY : main/CMakeFiles/ExperimentalConfigure.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalConfigure.dir/rule
-
-# Convenience name for target.
-ExperimentalConfigure: main/CMakeFiles/ExperimentalConfigure.dir/rule
-.PHONY : ExperimentalConfigure
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalConfigure.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalConfigure.dir/build.make main/CMakeFiles/ExperimentalConfigure.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalConfigure.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalBuild.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalBuild.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalBuild.dir/build.make main/CMakeFiles/ExperimentalBuild.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalBuild.dir/build.make main/CMakeFiles/ExperimentalBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalBuild"
-.PHONY : main/CMakeFiles/ExperimentalBuild.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalBuild.dir/rule
-
-# Convenience name for target.
-ExperimentalBuild: main/CMakeFiles/ExperimentalBuild.dir/rule
-.PHONY : ExperimentalBuild
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalBuild.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalBuild.dir/build.make main/CMakeFiles/ExperimentalBuild.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalBuild.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalTest.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalTest.dir/build.make main/CMakeFiles/ExperimentalTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalTest.dir/build.make main/CMakeFiles/ExperimentalTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalTest"
-.PHONY : main/CMakeFiles/ExperimentalTest.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalTest.dir/rule
-
-# Convenience name for target.
-ExperimentalTest: main/CMakeFiles/ExperimentalTest.dir/rule
-.PHONY : ExperimentalTest
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalTest.dir/build.make main/CMakeFiles/ExperimentalTest.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalTest.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalCoverage.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalCoverage.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalCoverage.dir/build.make main/CMakeFiles/ExperimentalCoverage.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalCoverage.dir/build.make main/CMakeFiles/ExperimentalCoverage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalCoverage"
-.PHONY : main/CMakeFiles/ExperimentalCoverage.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalCoverage.dir/rule
-
-# Convenience name for target.
-ExperimentalCoverage: main/CMakeFiles/ExperimentalCoverage.dir/rule
-.PHONY : ExperimentalCoverage
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalCoverage.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalCoverage.dir/build.make main/CMakeFiles/ExperimentalCoverage.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalCoverage.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalMemCheck.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalMemCheck.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalMemCheck.dir/build.make main/CMakeFiles/ExperimentalMemCheck.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalMemCheck.dir/build.make main/CMakeFiles/ExperimentalMemCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalMemCheck"
-.PHONY : main/CMakeFiles/ExperimentalMemCheck.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalMemCheck.dir/rule
-
-# Convenience name for target.
-ExperimentalMemCheck: main/CMakeFiles/ExperimentalMemCheck.dir/rule
-.PHONY : ExperimentalMemCheck
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalMemCheck.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalMemCheck.dir/build.make main/CMakeFiles/ExperimentalMemCheck.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalMemCheck.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ExperimentalSubmit.dir
-
-# All Build rule for target.
-main/CMakeFiles/ExperimentalSubmit.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalSubmit.dir/build.make main/CMakeFiles/ExperimentalSubmit.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalSubmit.dir/build.make main/CMakeFiles/ExperimentalSubmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ExperimentalSubmit"
-.PHONY : main/CMakeFiles/ExperimentalSubmit.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ExperimentalSubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalSubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ExperimentalSubmit.dir/rule
-
-# Convenience name for target.
-ExperimentalSubmit: main/CMakeFiles/ExperimentalSubmit.dir/rule
-.PHONY : ExperimentalSubmit
-
-# clean rule for target.
-main/CMakeFiles/ExperimentalSubmit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalSubmit.dir/build.make main/CMakeFiles/ExperimentalSubmit.dir/clean
-.PHONY : main/CMakeFiles/ExperimentalSubmit.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousStart.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousStart.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousStart.dir/build.make main/CMakeFiles/ContinuousStart.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousStart.dir/build.make main/CMakeFiles/ContinuousStart.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousStart"
-.PHONY : main/CMakeFiles/ContinuousStart.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousStart.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousStart.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousStart.dir/rule
-
-# Convenience name for target.
-ContinuousStart: main/CMakeFiles/ContinuousStart.dir/rule
-.PHONY : ContinuousStart
-
-# clean rule for target.
-main/CMakeFiles/ContinuousStart.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousStart.dir/build.make main/CMakeFiles/ContinuousStart.dir/clean
-.PHONY : main/CMakeFiles/ContinuousStart.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousUpdate.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousUpdate.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousUpdate.dir/build.make main/CMakeFiles/ContinuousUpdate.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousUpdate.dir/build.make main/CMakeFiles/ContinuousUpdate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousUpdate"
-.PHONY : main/CMakeFiles/ContinuousUpdate.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousUpdate.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousUpdate.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousUpdate.dir/rule
-
-# Convenience name for target.
-ContinuousUpdate: main/CMakeFiles/ContinuousUpdate.dir/rule
-.PHONY : ContinuousUpdate
-
-# clean rule for target.
-main/CMakeFiles/ContinuousUpdate.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousUpdate.dir/build.make main/CMakeFiles/ContinuousUpdate.dir/clean
-.PHONY : main/CMakeFiles/ContinuousUpdate.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousConfigure.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousConfigure.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousConfigure.dir/build.make main/CMakeFiles/ContinuousConfigure.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousConfigure.dir/build.make main/CMakeFiles/ContinuousConfigure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousConfigure"
-.PHONY : main/CMakeFiles/ContinuousConfigure.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousConfigure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousConfigure.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousConfigure.dir/rule
-
-# Convenience name for target.
-ContinuousConfigure: main/CMakeFiles/ContinuousConfigure.dir/rule
-.PHONY : ContinuousConfigure
-
-# clean rule for target.
-main/CMakeFiles/ContinuousConfigure.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousConfigure.dir/build.make main/CMakeFiles/ContinuousConfigure.dir/clean
-.PHONY : main/CMakeFiles/ContinuousConfigure.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousBuild.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousBuild.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousBuild.dir/build.make main/CMakeFiles/ContinuousBuild.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousBuild.dir/build.make main/CMakeFiles/ContinuousBuild.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousBuild"
-.PHONY : main/CMakeFiles/ContinuousBuild.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousBuild.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousBuild.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousBuild.dir/rule
-
-# Convenience name for target.
-ContinuousBuild: main/CMakeFiles/ContinuousBuild.dir/rule
-.PHONY : ContinuousBuild
-
-# clean rule for target.
-main/CMakeFiles/ContinuousBuild.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousBuild.dir/build.make main/CMakeFiles/ContinuousBuild.dir/clean
-.PHONY : main/CMakeFiles/ContinuousBuild.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousTest.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousTest.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousTest.dir/build.make main/CMakeFiles/ContinuousTest.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousTest.dir/build.make main/CMakeFiles/ContinuousTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousTest"
-.PHONY : main/CMakeFiles/ContinuousTest.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousTest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousTest.dir/rule
-
-# Convenience name for target.
-ContinuousTest: main/CMakeFiles/ContinuousTest.dir/rule
-.PHONY : ContinuousTest
-
-# clean rule for target.
-main/CMakeFiles/ContinuousTest.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousTest.dir/build.make main/CMakeFiles/ContinuousTest.dir/clean
-.PHONY : main/CMakeFiles/ContinuousTest.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousCoverage.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousCoverage.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousCoverage.dir/build.make main/CMakeFiles/ContinuousCoverage.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousCoverage.dir/build.make main/CMakeFiles/ContinuousCoverage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousCoverage"
-.PHONY : main/CMakeFiles/ContinuousCoverage.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousCoverage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousCoverage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousCoverage.dir/rule
-
-# Convenience name for target.
-ContinuousCoverage: main/CMakeFiles/ContinuousCoverage.dir/rule
-.PHONY : ContinuousCoverage
-
-# clean rule for target.
-main/CMakeFiles/ContinuousCoverage.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousCoverage.dir/build.make main/CMakeFiles/ContinuousCoverage.dir/clean
-.PHONY : main/CMakeFiles/ContinuousCoverage.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousMemCheck.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousMemCheck.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousMemCheck.dir/build.make main/CMakeFiles/ContinuousMemCheck.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousMemCheck.dir/build.make main/CMakeFiles/ContinuousMemCheck.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousMemCheck"
-.PHONY : main/CMakeFiles/ContinuousMemCheck.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousMemCheck.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousMemCheck.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousMemCheck.dir/rule
-
-# Convenience name for target.
-ContinuousMemCheck: main/CMakeFiles/ContinuousMemCheck.dir/rule
-.PHONY : ContinuousMemCheck
-
-# clean rule for target.
-main/CMakeFiles/ContinuousMemCheck.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousMemCheck.dir/build.make main/CMakeFiles/ContinuousMemCheck.dir/clean
-.PHONY : main/CMakeFiles/ContinuousMemCheck.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/ContinuousSubmit.dir
-
-# All Build rule for target.
-main/CMakeFiles/ContinuousSubmit.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousSubmit.dir/build.make main/CMakeFiles/ContinuousSubmit.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousSubmit.dir/build.make main/CMakeFiles/ContinuousSubmit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num= "Built target ContinuousSubmit"
-.PHONY : main/CMakeFiles/ContinuousSubmit.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/ContinuousSubmit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousSubmit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/ContinuousSubmit.dir/rule
-
-# Convenience name for target.
-ContinuousSubmit: main/CMakeFiles/ContinuousSubmit.dir/rule
-.PHONY : ContinuousSubmit
-
-# clean rule for target.
-main/CMakeFiles/ContinuousSubmit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousSubmit.dir/build.make main/CMakeFiles/ContinuousSubmit.dir/clean
-.PHONY : main/CMakeFiles/ContinuousSubmit.dir/clean
-
-#=============================================================================
-# Target rules for target main/CMakeFiles/main.dir
-
-# All Build rule for target.
-main/CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=11,12 "Built target main"
-.PHONY : main/CMakeFiles/main.dir/all
-
-# Build rule for subdir invocation for target.
-main/CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : main/CMakeFiles/main.dir/rule
-
-# Convenience name for target.
-main: main/CMakeFiles/main.dir/rule
-.PHONY : main
-
-# clean rule for target.
-main/CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/clean
-.PHONY : main/CMakeFiles/main.dir/clean
-
-#=============================================================================
-# Target rules for target exchange-platform/ordersInit/CMakeFiles/ordersInit.dir
-
-# All Build rule for target.
-exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/all:
-	$(MAKE) $(MAKESILENT) -f exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/build.make exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/depend
-	$(MAKE) $(MAKESILENT) -f exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/build.make exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=13,14 "Built target ordersInit"
-.PHONY : exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/all
-
-# Build rule for subdir invocation for target.
-exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/rule
-
-# Convenience name for target.
-ordersInit: exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/rule
+ordersInit: ordersInit/CMakeFiles/ordersInit.dir/rule
 .PHONY : ordersInit
 
 # clean rule for target.
-exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/build.make exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/clean
-.PHONY : exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/clean
+ordersInit/CMakeFiles/ordersInit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f ordersInit/CMakeFiles/ordersInit.dir/build.make ordersInit/CMakeFiles/ordersInit.dir/clean
+.PHONY : ordersInit/CMakeFiles/ordersInit.dir/clean
 
 #=============================================================================
-# Target rules for target exchange-platform/usersInit/CMakeFiles/usersInit.dir
+# Target rules for target usersInit/CMakeFiles/usersInit.dir
 
 # All Build rule for target.
-exchange-platform/usersInit/CMakeFiles/usersInit.dir/all:
-	$(MAKE) $(MAKESILENT) -f exchange-platform/usersInit/CMakeFiles/usersInit.dir/build.make exchange-platform/usersInit/CMakeFiles/usersInit.dir/depend
-	$(MAKE) $(MAKESILENT) -f exchange-platform/usersInit/CMakeFiles/usersInit.dir/build.make exchange-platform/usersInit/CMakeFiles/usersInit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=21,22 "Built target usersInit"
-.PHONY : exchange-platform/usersInit/CMakeFiles/usersInit.dir/all
+usersInit/CMakeFiles/usersInit.dir/all:
+	$(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/depend
+	$(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=23,24 "Built target usersInit"
+.PHONY : usersInit/CMakeFiles/usersInit.dir/all
 
 # Build rule for subdir invocation for target.
-exchange-platform/usersInit/CMakeFiles/usersInit.dir/rule: cmake_check_build_system
+usersInit/CMakeFiles/usersInit.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exchange-platform/usersInit/CMakeFiles/usersInit.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 usersInit/CMakeFiles/usersInit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
-.PHONY : exchange-platform/usersInit/CMakeFiles/usersInit.dir/rule
+.PHONY : usersInit/CMakeFiles/usersInit.dir/rule
 
 # Convenience name for target.
-usersInit: exchange-platform/usersInit/CMakeFiles/usersInit.dir/rule
+usersInit: usersInit/CMakeFiles/usersInit.dir/rule
 .PHONY : usersInit
 
 # clean rule for target.
-exchange-platform/usersInit/CMakeFiles/usersInit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f exchange-platform/usersInit/CMakeFiles/usersInit.dir/build.make exchange-platform/usersInit/CMakeFiles/usersInit.dir/clean
-.PHONY : exchange-platform/usersInit/CMakeFiles/usersInit.dir/clean
+usersInit/CMakeFiles/usersInit.dir/clean:
+	$(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/clean
+.PHONY : usersInit/CMakeFiles/usersInit.dir/clean
+
+#=============================================================================
+# Target rules for target main/CMakeFiles/exchange-app.dir
+
+# All Build rule for target.
+main/CMakeFiles/exchange-app.dir/all: exchangeInit/CMakeFiles/exchangeInit.dir/all
+main/CMakeFiles/exchange-app.dir/all: ordersInit/CMakeFiles/ordersInit.dir/all
+main/CMakeFiles/exchange-app.dir/all: usersInit/CMakeFiles/usersInit.dir/all
+	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/exchange-app.dir/build.make main/CMakeFiles/exchange-app.dir/depend
+	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/exchange-app.dir/build.make main/CMakeFiles/exchange-app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=1,2 "Built target exchange-app"
+.PHONY : main/CMakeFiles/exchange-app.dir/all
+
+# Build rule for subdir invocation for target.
+main/CMakeFiles/exchange-app.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/exchange-app.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
+.PHONY : main/CMakeFiles/exchange-app.dir/rule
+
+# Convenience name for target.
+exchange-app: main/CMakeFiles/exchange-app.dir/rule
+.PHONY : exchange-app
+
+# clean rule for target.
+main/CMakeFiles/exchange-app.dir/clean:
+	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/exchange-app.dir/build.make main/CMakeFiles/exchange-app.dir/clean
+.PHONY : main/CMakeFiles/exchange-app.dir/clean
 
 #=============================================================================
 # Target rules for target tests/CMakeFiles/test-exchangeInit.dir
@@ -1190,10 +436,10 @@ exchange-platform/usersInit/CMakeFiles/usersInit.dir/clean:
 # All Build rule for target.
 tests/CMakeFiles/test-exchangeInit.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 tests/CMakeFiles/test-exchangeInit.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-tests/CMakeFiles/test-exchangeInit.dir/all: exchange-platform/exchangeInit/CMakeFiles/exchangeInit.dir/all
+tests/CMakeFiles/test-exchangeInit.dir/all: exchangeInit/CMakeFiles/exchangeInit.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test-exchangeInit.dir/build.make tests/CMakeFiles/test-exchangeInit.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test-exchangeInit.dir/build.make tests/CMakeFiles/test-exchangeInit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=15,16 "Built target test-exchangeInit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=17,18 "Built target test-exchangeInit"
 .PHONY : tests/CMakeFiles/test-exchangeInit.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1218,15 +464,15 @@ tests/CMakeFiles/test-exchangeInit.dir/clean:
 # All Build rule for target.
 tests/CMakeFiles/test-ordersInit.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 tests/CMakeFiles/test-ordersInit.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-tests/CMakeFiles/test-ordersInit.dir/all: exchange-platform/ordersInit/CMakeFiles/ordersInit.dir/all
+tests/CMakeFiles/test-ordersInit.dir/all: ordersInit/CMakeFiles/ordersInit.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test-ordersInit.dir/build.make tests/CMakeFiles/test-ordersInit.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test-ordersInit.dir/build.make tests/CMakeFiles/test-ordersInit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=17,18 "Built target test-ordersInit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=19,20 "Built target test-ordersInit"
 .PHONY : tests/CMakeFiles/test-ordersInit.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test-ordersInit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test-ordersInit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test-ordersInit.dir/rule
@@ -1246,10 +492,10 @@ tests/CMakeFiles/test-ordersInit.dir/clean:
 # All Build rule for target.
 tests/CMakeFiles/test-usersInit.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 tests/CMakeFiles/test-usersInit.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
-tests/CMakeFiles/test-usersInit.dir/all: exchange-platform/usersInit/CMakeFiles/usersInit.dir/all
+tests/CMakeFiles/test-usersInit.dir/all: usersInit/CMakeFiles/usersInit.dir/all
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test-usersInit.dir/build.make tests/CMakeFiles/test-usersInit.dir/depend
 	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/test-usersInit.dir/build.make tests/CMakeFiles/test-usersInit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=19,20 "Built target test-usersInit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=21,22 "Built target test-usersInit"
 .PHONY : tests/CMakeFiles/test-usersInit.dir/all
 
 # Build rule for subdir invocation for target.

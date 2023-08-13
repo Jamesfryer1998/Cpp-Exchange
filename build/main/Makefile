@@ -192,417 +192,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-main/CMakeFiles/Experimental.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/Experimental.dir/rule
-.PHONY : main/CMakeFiles/Experimental.dir/rule
+main/CMakeFiles/exchange-app.dir/rule:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/exchange-app.dir/rule
+.PHONY : main/CMakeFiles/exchange-app.dir/rule
 
 # Convenience name for target.
-Experimental: main/CMakeFiles/Experimental.dir/rule
-.PHONY : Experimental
+exchange-app: main/CMakeFiles/exchange-app.dir/rule
+.PHONY : exchange-app
 
 # fast build rule for target.
-Experimental/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/Experimental.dir/build.make main/CMakeFiles/Experimental.dir/build
-.PHONY : Experimental/fast
-
-# Convenience name for target.
-main/CMakeFiles/Nightly.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/Nightly.dir/rule
-.PHONY : main/CMakeFiles/Nightly.dir/rule
-
-# Convenience name for target.
-Nightly: main/CMakeFiles/Nightly.dir/rule
-.PHONY : Nightly
-
-# fast build rule for target.
-Nightly/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/Nightly.dir/build.make main/CMakeFiles/Nightly.dir/build
-.PHONY : Nightly/fast
-
-# Convenience name for target.
-main/CMakeFiles/Continuous.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/Continuous.dir/rule
-.PHONY : main/CMakeFiles/Continuous.dir/rule
-
-# Convenience name for target.
-Continuous: main/CMakeFiles/Continuous.dir/rule
-.PHONY : Continuous
-
-# fast build rule for target.
-Continuous/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/Continuous.dir/build.make main/CMakeFiles/Continuous.dir/build
-.PHONY : Continuous/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyMemoryCheck.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyMemoryCheck.dir/rule
-.PHONY : main/CMakeFiles/NightlyMemoryCheck.dir/rule
-
-# Convenience name for target.
-NightlyMemoryCheck: main/CMakeFiles/NightlyMemoryCheck.dir/rule
-.PHONY : NightlyMemoryCheck
-
-# fast build rule for target.
-NightlyMemoryCheck/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemoryCheck.dir/build.make main/CMakeFiles/NightlyMemoryCheck.dir/build
-.PHONY : NightlyMemoryCheck/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyStart.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyStart.dir/rule
-.PHONY : main/CMakeFiles/NightlyStart.dir/rule
-
-# Convenience name for target.
-NightlyStart: main/CMakeFiles/NightlyStart.dir/rule
-.PHONY : NightlyStart
-
-# fast build rule for target.
-NightlyStart/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyStart.dir/build.make main/CMakeFiles/NightlyStart.dir/build
-.PHONY : NightlyStart/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyUpdate.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyUpdate.dir/rule
-.PHONY : main/CMakeFiles/NightlyUpdate.dir/rule
-
-# Convenience name for target.
-NightlyUpdate: main/CMakeFiles/NightlyUpdate.dir/rule
-.PHONY : NightlyUpdate
-
-# fast build rule for target.
-NightlyUpdate/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyUpdate.dir/build.make main/CMakeFiles/NightlyUpdate.dir/build
-.PHONY : NightlyUpdate/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyConfigure.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyConfigure.dir/rule
-.PHONY : main/CMakeFiles/NightlyConfigure.dir/rule
-
-# Convenience name for target.
-NightlyConfigure: main/CMakeFiles/NightlyConfigure.dir/rule
-.PHONY : NightlyConfigure
-
-# fast build rule for target.
-NightlyConfigure/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyConfigure.dir/build.make main/CMakeFiles/NightlyConfigure.dir/build
-.PHONY : NightlyConfigure/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyBuild.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyBuild.dir/rule
-.PHONY : main/CMakeFiles/NightlyBuild.dir/rule
-
-# Convenience name for target.
-NightlyBuild: main/CMakeFiles/NightlyBuild.dir/rule
-.PHONY : NightlyBuild
-
-# fast build rule for target.
-NightlyBuild/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyBuild.dir/build.make main/CMakeFiles/NightlyBuild.dir/build
-.PHONY : NightlyBuild/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyTest.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyTest.dir/rule
-.PHONY : main/CMakeFiles/NightlyTest.dir/rule
-
-# Convenience name for target.
-NightlyTest: main/CMakeFiles/NightlyTest.dir/rule
-.PHONY : NightlyTest
-
-# fast build rule for target.
-NightlyTest/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyTest.dir/build.make main/CMakeFiles/NightlyTest.dir/build
-.PHONY : NightlyTest/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyCoverage.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyCoverage.dir/rule
-.PHONY : main/CMakeFiles/NightlyCoverage.dir/rule
-
-# Convenience name for target.
-NightlyCoverage: main/CMakeFiles/NightlyCoverage.dir/rule
-.PHONY : NightlyCoverage
-
-# fast build rule for target.
-NightlyCoverage/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyCoverage.dir/build.make main/CMakeFiles/NightlyCoverage.dir/build
-.PHONY : NightlyCoverage/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlyMemCheck.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlyMemCheck.dir/rule
-.PHONY : main/CMakeFiles/NightlyMemCheck.dir/rule
-
-# Convenience name for target.
-NightlyMemCheck: main/CMakeFiles/NightlyMemCheck.dir/rule
-.PHONY : NightlyMemCheck
-
-# fast build rule for target.
-NightlyMemCheck/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlyMemCheck.dir/build.make main/CMakeFiles/NightlyMemCheck.dir/build
-.PHONY : NightlyMemCheck/fast
-
-# Convenience name for target.
-main/CMakeFiles/NightlySubmit.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/NightlySubmit.dir/rule
-.PHONY : main/CMakeFiles/NightlySubmit.dir/rule
-
-# Convenience name for target.
-NightlySubmit: main/CMakeFiles/NightlySubmit.dir/rule
-.PHONY : NightlySubmit
-
-# fast build rule for target.
-NightlySubmit/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/NightlySubmit.dir/build.make main/CMakeFiles/NightlySubmit.dir/build
-.PHONY : NightlySubmit/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalStart.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalStart.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalStart.dir/rule
-
-# Convenience name for target.
-ExperimentalStart: main/CMakeFiles/ExperimentalStart.dir/rule
-.PHONY : ExperimentalStart
-
-# fast build rule for target.
-ExperimentalStart/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalStart.dir/build.make main/CMakeFiles/ExperimentalStart.dir/build
-.PHONY : ExperimentalStart/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalUpdate.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalUpdate.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalUpdate.dir/rule
-
-# Convenience name for target.
-ExperimentalUpdate: main/CMakeFiles/ExperimentalUpdate.dir/rule
-.PHONY : ExperimentalUpdate
-
-# fast build rule for target.
-ExperimentalUpdate/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalUpdate.dir/build.make main/CMakeFiles/ExperimentalUpdate.dir/build
-.PHONY : ExperimentalUpdate/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalConfigure.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalConfigure.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalConfigure.dir/rule
-
-# Convenience name for target.
-ExperimentalConfigure: main/CMakeFiles/ExperimentalConfigure.dir/rule
-.PHONY : ExperimentalConfigure
-
-# fast build rule for target.
-ExperimentalConfigure/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalConfigure.dir/build.make main/CMakeFiles/ExperimentalConfigure.dir/build
-.PHONY : ExperimentalConfigure/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalBuild.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalBuild.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalBuild.dir/rule
-
-# Convenience name for target.
-ExperimentalBuild: main/CMakeFiles/ExperimentalBuild.dir/rule
-.PHONY : ExperimentalBuild
-
-# fast build rule for target.
-ExperimentalBuild/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalBuild.dir/build.make main/CMakeFiles/ExperimentalBuild.dir/build
-.PHONY : ExperimentalBuild/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalTest.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalTest.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalTest.dir/rule
-
-# Convenience name for target.
-ExperimentalTest: main/CMakeFiles/ExperimentalTest.dir/rule
-.PHONY : ExperimentalTest
-
-# fast build rule for target.
-ExperimentalTest/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalTest.dir/build.make main/CMakeFiles/ExperimentalTest.dir/build
-.PHONY : ExperimentalTest/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalCoverage.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalCoverage.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalCoverage.dir/rule
-
-# Convenience name for target.
-ExperimentalCoverage: main/CMakeFiles/ExperimentalCoverage.dir/rule
-.PHONY : ExperimentalCoverage
-
-# fast build rule for target.
-ExperimentalCoverage/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalCoverage.dir/build.make main/CMakeFiles/ExperimentalCoverage.dir/build
-.PHONY : ExperimentalCoverage/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalMemCheck.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalMemCheck.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalMemCheck.dir/rule
-
-# Convenience name for target.
-ExperimentalMemCheck: main/CMakeFiles/ExperimentalMemCheck.dir/rule
-.PHONY : ExperimentalMemCheck
-
-# fast build rule for target.
-ExperimentalMemCheck/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalMemCheck.dir/build.make main/CMakeFiles/ExperimentalMemCheck.dir/build
-.PHONY : ExperimentalMemCheck/fast
-
-# Convenience name for target.
-main/CMakeFiles/ExperimentalSubmit.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ExperimentalSubmit.dir/rule
-.PHONY : main/CMakeFiles/ExperimentalSubmit.dir/rule
-
-# Convenience name for target.
-ExperimentalSubmit: main/CMakeFiles/ExperimentalSubmit.dir/rule
-.PHONY : ExperimentalSubmit
-
-# fast build rule for target.
-ExperimentalSubmit/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ExperimentalSubmit.dir/build.make main/CMakeFiles/ExperimentalSubmit.dir/build
-.PHONY : ExperimentalSubmit/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousStart.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousStart.dir/rule
-.PHONY : main/CMakeFiles/ContinuousStart.dir/rule
-
-# Convenience name for target.
-ContinuousStart: main/CMakeFiles/ContinuousStart.dir/rule
-.PHONY : ContinuousStart
-
-# fast build rule for target.
-ContinuousStart/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousStart.dir/build.make main/CMakeFiles/ContinuousStart.dir/build
-.PHONY : ContinuousStart/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousUpdate.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousUpdate.dir/rule
-.PHONY : main/CMakeFiles/ContinuousUpdate.dir/rule
-
-# Convenience name for target.
-ContinuousUpdate: main/CMakeFiles/ContinuousUpdate.dir/rule
-.PHONY : ContinuousUpdate
-
-# fast build rule for target.
-ContinuousUpdate/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousUpdate.dir/build.make main/CMakeFiles/ContinuousUpdate.dir/build
-.PHONY : ContinuousUpdate/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousConfigure.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousConfigure.dir/rule
-.PHONY : main/CMakeFiles/ContinuousConfigure.dir/rule
-
-# Convenience name for target.
-ContinuousConfigure: main/CMakeFiles/ContinuousConfigure.dir/rule
-.PHONY : ContinuousConfigure
-
-# fast build rule for target.
-ContinuousConfigure/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousConfigure.dir/build.make main/CMakeFiles/ContinuousConfigure.dir/build
-.PHONY : ContinuousConfigure/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousBuild.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousBuild.dir/rule
-.PHONY : main/CMakeFiles/ContinuousBuild.dir/rule
-
-# Convenience name for target.
-ContinuousBuild: main/CMakeFiles/ContinuousBuild.dir/rule
-.PHONY : ContinuousBuild
-
-# fast build rule for target.
-ContinuousBuild/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousBuild.dir/build.make main/CMakeFiles/ContinuousBuild.dir/build
-.PHONY : ContinuousBuild/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousTest.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousTest.dir/rule
-.PHONY : main/CMakeFiles/ContinuousTest.dir/rule
-
-# Convenience name for target.
-ContinuousTest: main/CMakeFiles/ContinuousTest.dir/rule
-.PHONY : ContinuousTest
-
-# fast build rule for target.
-ContinuousTest/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousTest.dir/build.make main/CMakeFiles/ContinuousTest.dir/build
-.PHONY : ContinuousTest/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousCoverage.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousCoverage.dir/rule
-.PHONY : main/CMakeFiles/ContinuousCoverage.dir/rule
-
-# Convenience name for target.
-ContinuousCoverage: main/CMakeFiles/ContinuousCoverage.dir/rule
-.PHONY : ContinuousCoverage
-
-# fast build rule for target.
-ContinuousCoverage/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousCoverage.dir/build.make main/CMakeFiles/ContinuousCoverage.dir/build
-.PHONY : ContinuousCoverage/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousMemCheck.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousMemCheck.dir/rule
-.PHONY : main/CMakeFiles/ContinuousMemCheck.dir/rule
-
-# Convenience name for target.
-ContinuousMemCheck: main/CMakeFiles/ContinuousMemCheck.dir/rule
-.PHONY : ContinuousMemCheck
-
-# fast build rule for target.
-ContinuousMemCheck/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousMemCheck.dir/build.make main/CMakeFiles/ContinuousMemCheck.dir/build
-.PHONY : ContinuousMemCheck/fast
-
-# Convenience name for target.
-main/CMakeFiles/ContinuousSubmit.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/ContinuousSubmit.dir/rule
-.PHONY : main/CMakeFiles/ContinuousSubmit.dir/rule
-
-# Convenience name for target.
-ContinuousSubmit: main/CMakeFiles/ContinuousSubmit.dir/rule
-.PHONY : ContinuousSubmit
-
-# fast build rule for target.
-ContinuousSubmit/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/ContinuousSubmit.dir/build.make main/CMakeFiles/ContinuousSubmit.dir/build
-.PHONY : ContinuousSubmit/fast
-
-# Convenience name for target.
-main/CMakeFiles/main.dir/rule:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/main.dir/rule
-.PHONY : main/CMakeFiles/main.dir/rule
-
-# Convenience name for target.
-main: main/CMakeFiles/main.dir/rule
-.PHONY : main
-
-# fast build rule for target.
-main/fast:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/build
-.PHONY : main/fast
+exchange-app/fast:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/exchange-app.dir/build.make main/CMakeFiles/exchange-app.dir/build
+.PHONY : exchange-app/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/main.cpp.o
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/exchange-app.dir/build.make main/CMakeFiles/exchange-app.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -610,7 +218,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/main.cpp.i
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/exchange-app.dir/build.make main/CMakeFiles/exchange-app.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -618,7 +226,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/main.dir/build.make main/CMakeFiles/main.dir/main.cpp.s
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f main/CMakeFiles/exchange-app.dir/build.make main/CMakeFiles/exchange-app.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -636,35 +244,7 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... Continuous"
-	@echo "... ContinuousBuild"
-	@echo "... ContinuousConfigure"
-	@echo "... ContinuousCoverage"
-	@echo "... ContinuousMemCheck"
-	@echo "... ContinuousStart"
-	@echo "... ContinuousSubmit"
-	@echo "... ContinuousTest"
-	@echo "... ContinuousUpdate"
-	@echo "... Experimental"
-	@echo "... ExperimentalBuild"
-	@echo "... ExperimentalConfigure"
-	@echo "... ExperimentalCoverage"
-	@echo "... ExperimentalMemCheck"
-	@echo "... ExperimentalStart"
-	@echo "... ExperimentalSubmit"
-	@echo "... ExperimentalTest"
-	@echo "... ExperimentalUpdate"
-	@echo "... Nightly"
-	@echo "... NightlyBuild"
-	@echo "... NightlyConfigure"
-	@echo "... NightlyCoverage"
-	@echo "... NightlyMemCheck"
-	@echo "... NightlyMemoryCheck"
-	@echo "... NightlyStart"
-	@echo "... NightlySubmit"
-	@echo "... NightlyTest"
-	@echo "... NightlyUpdate"
-	@echo "... main"
+	@echo "... exchange-app"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

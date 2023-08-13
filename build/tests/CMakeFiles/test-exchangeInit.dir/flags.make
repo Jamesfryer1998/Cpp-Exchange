@@ -4,7 +4,7 @@
 # compile CXX with /Library/Developer/CommandLineTools/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/james/Projects/exchange/exchange-platform/exchangeInit/.. -isystem /Users/james/Projects/exchange/build/_deps/googletest-src/googletest/include -isystem /Users/james/Projects/exchange/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -I/Users/james/Projects/exchange/exchangeInit/.. -isystem /Users/james/Projects/exchange/build/_deps/googletest-src/googletest/include -isystem /Users/james/Projects/exchange/build/_deps/googletest-src/googletest
 
 CXX_FLAGSarm64 = -Wall -Werror -Wextra -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk
 

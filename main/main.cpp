@@ -1,5 +1,7 @@
 #include <iostream>
+#include <ordersInit/Order.h>
 
-int main(int, char**){
-    std::cout << "Hello, from exchange!\n";
+int main(){
+    Order app{};
+    app.TestFunc();
 }

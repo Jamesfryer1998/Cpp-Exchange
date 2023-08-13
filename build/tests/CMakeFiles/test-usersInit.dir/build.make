@@ -93,7 +93,7 @@ test__usersInit_EXTERNAL_OBJECTS =
 tests/test-usersInit: tests/CMakeFiles/test-usersInit.dir/TestOrders.cpp.o
 tests/test-usersInit: tests/CMakeFiles/test-usersInit.dir/build.make
 tests/test-usersInit: lib/libgtest_main.a
-tests/test-usersInit: exchange-platform/usersInit/libusersInit.a
+tests/test-usersInit: usersInit/libusersInit.a
 tests/test-usersInit: lib/libgtest.a
 tests/test-usersInit: tests/CMakeFiles/test-usersInit.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test-usersInit"

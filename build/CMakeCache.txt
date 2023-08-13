@@ -203,7 +203,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=exchange-platform
+CMAKE_PROJECT_NAME:STATIC=exchange
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=1.11.0
@@ -386,7 +386,7 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //Name of the computer/site where compile is being run
-SITE:STRING=192.168.1.102
+SITE:STRING=MacBook-Pro.local
 
 //Value Computed by CMake
 exchange-platform_BINARY_DIR:STATIC=/Users/james/Projects/exchange/build
@@ -398,22 +398,13 @@ exchange-platform_IS_TOP_LEVEL:STATIC=ON
 exchange-platform_SOURCE_DIR:STATIC=/Users/james/Projects/exchange
 
 //Value Computed by CMake
-exchangeInit_BINARY_DIR:STATIC=/Users/james/Projects/exchange/build
+exchange_BINARY_DIR:STATIC=/Users/james/Projects/exchange/build
 
 //Value Computed by CMake
-exchangeInit_IS_TOP_LEVEL:STATIC=ON
+exchange_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-exchangeInit_SOURCE_DIR:STATIC=/Users/james/Projects/exchange
-
-//Value Computed by CMake
-exchange_BINARY_DIR:STATIC=/Users/james/Projects/exchange/build/main
-
-//Value Computed by CMake
-exchange_IS_TOP_LEVEL:STATIC=OFF
-
-//Value Computed by CMake
-exchange_SOURCE_DIR:STATIC=/Users/james/Projects/exchange/main
+exchange_SOURCE_DIR:STATIC=/Users/james/Projects/exchange
 
 //Value Computed by CMake
 gmock_BINARY_DIR:STATIC=/Users/james/Projects/exchange/build/_deps/googletest-build/googlemock
@@ -493,8 +484,6 @@ CMAKE_COLOR_MAKEFILE-ADVANCED:INTERNAL=1
 CMAKE_COMMAND:INTERNAL=/Users/james/miniforge3/envs/exchange/bin/cmake
 //Path to cpack program executable.
 CMAKE_CPACK_COMMAND:INTERNAL=/Users/james/miniforge3/envs/exchange/bin/cpack
-//ADVANCED property for variable: CMAKE_CTEST_COMMAND
-CMAKE_CTEST_COMMAND-ADVANCED:INTERNAL=1
 //Path to ctest program executable.
 CMAKE_CTEST_COMMAND:INTERNAL=/Users/james/miniforge3/envs/exchange/bin/ctest
 //ADVANCED property for variable: CMAKE_CXX_COMPILER

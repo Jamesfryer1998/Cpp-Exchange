@@ -40,10 +40,10 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/Users/james/Projects/exchange/build/_deps/googletest-build/cmake_install.cmake")
-  include("/Users/james/Projects/exchange/build/exchange-platform/exchangeInit/cmake_install.cmake")
+  include("/Users/james/Projects/exchange/build/exchangeInit/cmake_install.cmake")
+  include("/Users/james/Projects/exchange/build/ordersInit/cmake_install.cmake")
+  include("/Users/james/Projects/exchange/build/usersInit/cmake_install.cmake")
   include("/Users/james/Projects/exchange/build/main/cmake_install.cmake")
-  include("/Users/james/Projects/exchange/build/exchange-platform/ordersInit/cmake_install.cmake")
-  include("/Users/james/Projects/exchange/build/exchange-platform/usersInit/cmake_install.cmake")
   include("/Users/james/Projects/exchange/build/tests/cmake_install.cmake")
 
 endif()

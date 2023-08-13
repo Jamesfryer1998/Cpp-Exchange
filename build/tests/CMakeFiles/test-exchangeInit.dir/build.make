@@ -93,7 +93,7 @@ test__exchangeInit_EXTERNAL_OBJECTS =
 tests/test-exchangeInit: tests/CMakeFiles/test-exchangeInit.dir/TestOrders.cpp.o
 tests/test-exchangeInit: tests/CMakeFiles/test-exchangeInit.dir/build.make
 tests/test-exchangeInit: lib/libgtest_main.a
-tests/test-exchangeInit: exchange-platform/exchangeInit/libexchangeInit.a
+tests/test-exchangeInit: exchangeInit/libexchangeInit.a
 tests/test-exchangeInit: lib/libgtest.a
 tests/test-exchangeInit: tests/CMakeFiles/test-exchangeInit.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test-exchangeInit"
