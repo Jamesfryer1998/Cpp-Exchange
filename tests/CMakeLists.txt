@@ -1,0 +1,17 @@
+file(GLOB SOURCES *.cpp)
+add_executable(test-exchangeInit ${SOURCES})
+add_executable(test-ordersInit ${SOURCES})
+add_executable(test-usersInit ${SOURCES})
+
+target_link_libraries(test-exchangeInit gtest_main)
+target_link_libraries(test-ordersInit gtest_main)
+target_link_libraries(test-usersInit gtest_main)
+
+target_link_libraries(test-exchangeInit exchangeInit)
+target_link_libraries(test-ordersInit ordersInit)
+target_link_libraries(test-usersInit usersInit)
+
+include(GoogleTest)
+gtest_discover_tests(test-exchangeInit)
+gtest_discover_tests(test-ordersInit)
+gtest_discover_tests(test-usersInit)
