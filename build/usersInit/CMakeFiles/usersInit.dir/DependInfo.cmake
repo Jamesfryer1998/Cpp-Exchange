@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/james/Projects/exchange/usersInit/main.cpp" "usersInit/CMakeFiles/usersInit.dir/main.cpp.o" "gcc" "usersInit/CMakeFiles/usersInit.dir/main.cpp.o.d"
+  "/Users/james/Projects/exchange/usersInit/User.cpp" "usersInit/CMakeFiles/usersInit.dir/User.cpp.o" "gcc" "usersInit/CMakeFiles/usersInit.dir/User.cpp.o.d"
+  "/Users/james/Projects/exchange/usersInit/Wallet.cpp" "usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o" "gcc" "usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -69,31 +69,47 @@ include usersInit/CMakeFiles/usersInit.dir/progress.make
 # Include the compile flags for this target's objects.
 include usersInit/CMakeFiles/usersInit.dir/flags.make
 
-usersInit/CMakeFiles/usersInit.dir/main.cpp.o: usersInit/CMakeFiles/usersInit.dir/flags.make
-usersInit/CMakeFiles/usersInit.dir/main.cpp.o: /Users/james/Projects/exchange/usersInit/main.cpp
-usersInit/CMakeFiles/usersInit.dir/main.cpp.o: usersInit/CMakeFiles/usersInit.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object usersInit/CMakeFiles/usersInit.dir/main.cpp.o"
-	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT usersInit/CMakeFiles/usersInit.dir/main.cpp.o -MF CMakeFiles/usersInit.dir/main.cpp.o.d -o CMakeFiles/usersInit.dir/main.cpp.o -c /Users/james/Projects/exchange/usersInit/main.cpp
+usersInit/CMakeFiles/usersInit.dir/User.cpp.o: usersInit/CMakeFiles/usersInit.dir/flags.make
+usersInit/CMakeFiles/usersInit.dir/User.cpp.o: /Users/james/Projects/exchange/usersInit/User.cpp
+usersInit/CMakeFiles/usersInit.dir/User.cpp.o: usersInit/CMakeFiles/usersInit.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object usersInit/CMakeFiles/usersInit.dir/User.cpp.o"
+	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT usersInit/CMakeFiles/usersInit.dir/User.cpp.o -MF CMakeFiles/usersInit.dir/User.cpp.o.d -o CMakeFiles/usersInit.dir/User.cpp.o -c /Users/james/Projects/exchange/usersInit/User.cpp
 
-usersInit/CMakeFiles/usersInit.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usersInit.dir/main.cpp.i"
-	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/james/Projects/exchange/usersInit/main.cpp > CMakeFiles/usersInit.dir/main.cpp.i
+usersInit/CMakeFiles/usersInit.dir/User.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usersInit.dir/User.cpp.i"
+	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/james/Projects/exchange/usersInit/User.cpp > CMakeFiles/usersInit.dir/User.cpp.i
 
-usersInit/CMakeFiles/usersInit.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usersInit.dir/main.cpp.s"
-	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/james/Projects/exchange/usersInit/main.cpp -o CMakeFiles/usersInit.dir/main.cpp.s
+usersInit/CMakeFiles/usersInit.dir/User.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usersInit.dir/User.cpp.s"
+	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/james/Projects/exchange/usersInit/User.cpp -o CMakeFiles/usersInit.dir/User.cpp.s
+
+usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o: usersInit/CMakeFiles/usersInit.dir/flags.make
+usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o: /Users/james/Projects/exchange/usersInit/Wallet.cpp
+usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o: usersInit/CMakeFiles/usersInit.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o"
+	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o -MF CMakeFiles/usersInit.dir/Wallet.cpp.o.d -o CMakeFiles/usersInit.dir/Wallet.cpp.o -c /Users/james/Projects/exchange/usersInit/Wallet.cpp
+
+usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/usersInit.dir/Wallet.cpp.i"
+	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/james/Projects/exchange/usersInit/Wallet.cpp > CMakeFiles/usersInit.dir/Wallet.cpp.i
+
+usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/usersInit.dir/Wallet.cpp.s"
+	cd /Users/james/Projects/exchange/build/usersInit && /Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/james/Projects/exchange/usersInit/Wallet.cpp -o CMakeFiles/usersInit.dir/Wallet.cpp.s
 
 # Object files for target usersInit
 usersInit_OBJECTS = \
-"CMakeFiles/usersInit.dir/main.cpp.o"
+"CMakeFiles/usersInit.dir/User.cpp.o" \
+"CMakeFiles/usersInit.dir/Wallet.cpp.o"
 
 # External object files for target usersInit
 usersInit_EXTERNAL_OBJECTS =
 
-usersInit/libusersInit.a: usersInit/CMakeFiles/usersInit.dir/main.cpp.o
+usersInit/libusersInit.a: usersInit/CMakeFiles/usersInit.dir/User.cpp.o
+usersInit/libusersInit.a: usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o
 usersInit/libusersInit.a: usersInit/CMakeFiles/usersInit.dir/build.make
 usersInit/libusersInit.a: usersInit/CMakeFiles/usersInit.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libusersInit.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libusersInit.a"
 	cd /Users/james/Projects/exchange/build/usersInit && $(CMAKE_COMMAND) -P CMakeFiles/usersInit.dir/cmake_clean_target.cmake
 	cd /Users/james/Projects/exchange/build/usersInit && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/usersInit.dir/link.txt --verbose=$(VERBOSE)
 

@@ -205,29 +205,53 @@ usersInit/fast:
 	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/build
 .PHONY : usersInit/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+User.o: User.cpp.o
+.PHONY : User.o
 
 # target to build an object file
-main.cpp.o:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/main.cpp.o
-.PHONY : main.cpp.o
+User.cpp.o:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/User.cpp.o
+.PHONY : User.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+User.i: User.cpp.i
+.PHONY : User.i
 
 # target to preprocess a source file
-main.cpp.i:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/main.cpp.i
-.PHONY : main.cpp.i
+User.cpp.i:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/User.cpp.i
+.PHONY : User.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+User.s: User.cpp.s
+.PHONY : User.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/main.cpp.s
-.PHONY : main.cpp.s
+User.cpp.s:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/User.cpp.s
+.PHONY : User.cpp.s
+
+Wallet.o: Wallet.cpp.o
+.PHONY : Wallet.o
+
+# target to build an object file
+Wallet.cpp.o:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.o
+.PHONY : Wallet.cpp.o
+
+Wallet.i: Wallet.cpp.i
+.PHONY : Wallet.i
+
+# target to preprocess a source file
+Wallet.cpp.i:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.i
+.PHONY : Wallet.cpp.i
+
+Wallet.s: Wallet.cpp.s
+.PHONY : Wallet.s
+
+# target to generate assembly for a file
+Wallet.cpp.s:
+	cd /Users/james/Projects/exchange/build && $(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/Wallet.cpp.s
+.PHONY : Wallet.cpp.s
 
 # Help Target
 help:
@@ -245,9 +269,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... usersInit"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... User.o"
+	@echo "... User.i"
+	@echo "... User.s"
+	@echo "... Wallet.o"
+	@echo "... Wallet.i"
+	@echo "... Wallet.s"
 .PHONY : help
 
 

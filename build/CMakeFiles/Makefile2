@@ -383,12 +383,12 @@ ordersInit/CMakeFiles/ordersInit.dir/clean:
 usersInit/CMakeFiles/usersInit.dir/all:
 	$(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/depend
 	$(MAKE) $(MAKESILENT) -f usersInit/CMakeFiles/usersInit.dir/build.make usersInit/CMakeFiles/usersInit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=23,24 "Built target usersInit"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/james/Projects/exchange/build/CMakeFiles --progress-num=23,24,25 "Built target usersInit"
 .PHONY : usersInit/CMakeFiles/usersInit.dir/all
 
 # Build rule for subdir invocation for target.
 usersInit/CMakeFiles/usersInit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 usersInit/CMakeFiles/usersInit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
 .PHONY : usersInit/CMakeFiles/usersInit.dir/rule
@@ -416,7 +416,7 @@ main/CMakeFiles/exchange-app.dir/all: usersInit/CMakeFiles/usersInit.dir/all
 
 # Build rule for subdir invocation for target.
 main/CMakeFiles/exchange-app.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/exchange-app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
 .PHONY : main/CMakeFiles/exchange-app.dir/rule
@@ -500,7 +500,7 @@ tests/CMakeFiles/test-usersInit.dir/all: usersInit/CMakeFiles/usersInit.dir/all
 
 # Build rule for subdir invocation for target.
 tests/CMakeFiles/test-usersInit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/test-usersInit.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/james/Projects/exchange/build/CMakeFiles 0
 .PHONY : tests/CMakeFiles/test-usersInit.dir/rule

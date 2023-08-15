@@ -2,6 +2,6 @@
 #include <ordersInit/Order.h>
 
 int main(){
-    Order app{};
-    app.TestFunc();
+    // Order app{};
+    // app.TestFunc();
 }
