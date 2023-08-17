@@ -12,6 +12,8 @@ class OrderBook
         void removeOrder(const Order& order);
         std::vector<Order> getMatchingOrders(const Order& order) const;
 
+        // this is a test line
+
     private:
         struct OrderComparator {
             bool operator()(const Order& lhs, const Order& rhs) const {
