@@ -1,12 +1,12 @@
 # C++ Exchange
 
 ## Instructions to run project
- - When adding/removing a file use: 
-    <code> cmake -B build </code>
- - When editing code within the repo: 
-    cmake --build build
- - To run the project:
-    ./build/main/main
+ - When adding/removing a file use:<br>
+    <code>cmake -B build</code>
+ - When editing code within the repo:<br>
+    <code>cmake --build build</code>
+ - To run the project:<br>
+    <code>./build/main/main</code>
 
 ### Create a new git branch
  - git checkout -b branch_name
