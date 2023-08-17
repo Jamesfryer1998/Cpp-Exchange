@@ -2,7 +2,7 @@
 
 ## Instructions to run project
  - When adding/removing a file use: 
-    cmake -B build
+    <code> cmake -B build </code>
  - When editing code within the repo: 
     cmake --build build
  - To run the project:
