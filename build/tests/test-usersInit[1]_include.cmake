@@ -1,5 +1,0 @@
-if(EXISTS "/Users/james/Projects/exchange/build/tests/test-usersInit[1]_tests.cmake")
-  include("/Users/james/Projects/exchange/build/tests/test-usersInit[1]_tests.cmake")
-else()
-  add_test(test-usersInit_NOT_BUILT test-usersInit_NOT_BUILT)
-endif()

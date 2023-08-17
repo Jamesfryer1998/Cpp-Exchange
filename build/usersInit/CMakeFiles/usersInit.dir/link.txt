@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libusersInit.a CMakeFiles/usersInit.dir/User.cpp.o CMakeFiles/usersInit.dir/Wallet.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libusersInit.a

@@ -1,2 +1,0 @@
-/Library/Developer/CommandLineTools/usr/bin/ar qc libordersInit.a CMakeFiles/ordersInit.dir/Order.cpp.o CMakeFiles/ordersInit.dir/OrderBook.cpp.o CMakeFiles/ordersInit.dir/OrderBookEntry.cpp.o
-/Library/Developer/CommandLineTools/usr/bin/ranlib libordersInit.a
