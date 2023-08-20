@@ -1,5 +1,7 @@
 #include "ordersInit/OrderBook.h"
 
+int OrderBook::currentOrderId = 0;
+
 OrderBook::OrderBook(){
 
 };

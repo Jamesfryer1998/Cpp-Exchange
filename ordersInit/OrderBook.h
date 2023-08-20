@@ -27,10 +27,19 @@ class OrderBook
         std::vector<PriceLevel> bidLevels; // Buy
         std::vector<PriceLevel> askLevels; // Sell
 
-        // Varibles
-        static int currentOrderId;
+        // Getter
+        static int getCurrentOrderId(){
+            return currentOrderId;
+        }
+
+        // Setter
+        static void updateCurrentOrderId(int OrderId){
+            currentOrderId = OrderId + 1;
+        }
 
     private:
+        // Varibles
+        static int currentOrderId;
 
 
 };

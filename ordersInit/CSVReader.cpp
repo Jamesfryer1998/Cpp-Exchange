@@ -77,7 +77,13 @@ Order CSVReader::csvStringToOBE(std::vector<std::string> tokens)
         std::cout << "Bad data." << std::endl;
         throw;
     }
-    Order OBE{  OrderBook::currentOrderId++,             // orderId
+    // Get current orderId
+    int currentOrderId = OrderBook::getCurrentOrderId();
+
+    // Update orderId + 1
+    OrderBook::updateCurrentOrderId(currentOrderId);
+
+    Order OBE{  currentOrderId,                          // orderId
                 tokens[0],                               // timestamp
                 Order::OrderStringConversion(tokens[2]), // Type 
                 tokens[1],                               // product
@@ -102,7 +108,14 @@ Order CSVReader::stringToOBE(std::string timestamp,
         throw;
     }
 
-    Order OBE{  OrderBook::currentOrderId++,
+    // Get current orderId
+    int currentOrderId = OrderBook::getCurrentOrderId();
+
+    // Update orderId + 1
+    // This could be optimised, just update the orderId by the length of the CSV at the end...
+    OrderBook::updateCurrentOrderId(currentOrderId);
+
+    Order OBE{  currentOrderId,
                 timestamp,
                 type,
                 product,
