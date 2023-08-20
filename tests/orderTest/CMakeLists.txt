@@ -1,0 +1,6 @@
+file(GLOB SOURCES *.cpp)
+add_executable(test-order ${SOURCES})
+target_link_libraries(test-order gtest_main)
+target_link_libraries(test-order ordersInit)
+include(GoogleTest)
+gtest_discover_tests(test-order)

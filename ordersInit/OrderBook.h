@@ -19,6 +19,7 @@ class OrderBook
         void deleteOrder(int orderId);
         Order* lookupOrder(int orderId);
 
+
         // Matching system
         std::vector<Order> getMatchingOrders(const Order& order) const;
 
@@ -36,6 +37,10 @@ class OrderBook
         static void updateCurrentOrderId(int OrderId){
             currentOrderId = OrderId + 1;
         }
+
+        static void resetOrderId(){
+            currentOrderId = 0;
+        };
 
     private:
         // Varibles
