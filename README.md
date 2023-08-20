@@ -1,15 +1,15 @@
 # C++ Exchange
 
 ## Instructions to run project
- - When adding/removing a file use:
+When adding/removing a file use:
  ```
    `cmake -B build`
  ```
- - When editing code within the repo:<br>
-    ```
-    `cmake --build build`
-    ```
- - To run the project:<br>
+When editing code within the repo:
+   ```
+   `cmake --build build`
+   ```
+To run the project:
    ```
    `./build/main/main`
    ```
