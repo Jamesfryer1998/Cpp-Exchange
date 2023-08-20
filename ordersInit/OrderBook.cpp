@@ -1,7 +1,7 @@
-#include <ordersInit/OrderBook.h>
+#include "ordersInit/OrderBook.h"
 
 OrderBook::OrderBook(){
-    
+
 };
 
 void OrderBook::insertOrder(const Order& order, double price, Type type){
@@ -12,7 +12,7 @@ void OrderBook::insertOrder(const Order& order, double price, Type type){
         bidLevels.push_back(newPriceLevel); // If type is Bid, add to bidLevel
     } else if (type == Type::Ask)
     {
-        bidLevels.push_back(newPriceLevel); // If type is Bid, add to bidLevel
+        askLevels.push_back(newPriceLevel); // If type is Bid, add to askLevel
     }
 };
 

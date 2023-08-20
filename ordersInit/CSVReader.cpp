@@ -1,8 +1,9 @@
+#include "CSVReader.h"
+#include "Order.h"
+#include "OrderBook.h"
+
 #include <iostream>
 #include <fstream>
-#include <CSVReader.h>
-#include <Order.h>
-#include <OrderBook.h>
 
 CSVReader::CSVReader()
 {
@@ -29,7 +30,6 @@ std::vector<Order> CSVReader::readCSV(std::string fileName)
             {
                 // std::cout << "CSVReader::readCSV bad data processed"  << std::endl;
             }
-            
         }
     }
 
@@ -86,8 +86,7 @@ Order CSVReader::csvStringToOBE(std::vector<std::string> tokens)
     return OBE;
 }
 
-Order CSVReader::stringToOBE(int orderId,
-                             std::string timestamp,
+Order CSVReader::stringToOBE(std::string timestamp,
                              std::string product, 
                              Type type,
                              std::string priceString,

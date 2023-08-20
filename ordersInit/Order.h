@@ -12,13 +12,14 @@ enum class Type {
 class Order
 {
     public:
+        Order() = default;
+        
         Order( int orderId,
                std::string _timestamp,
                Type _orderType,
                std::string _product,
                double _price,
-               double _amount
-        );
+               double _amount );
 
         // Methods
         void init();
