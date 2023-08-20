@@ -1,34 +1,36 @@
 #include <ordersInit/Order.h>
 #include <set>
 
+class PriceLevel{
+    public:
+        double price;
+        std::vector<Order*> orders;
+};
+
+
 class OrderBook
 {
     public:
         OrderBook();
 
-        // DECIDE ON THE STRUCTURE OF THE ORDERBOOK
+        // OrderBook Methods
+        void insertOrder(const Order& order, double price, Type type); // If type == sell/buy
+        void updateOrder(int orderId, double newProductAmount);
+        void deleteOrder(int orderId);
+        Order* lookupOrder(int orderId);
 
-        void addOrder(const Order& order);
-        void removeOrder(const Order& order);
+        // Matching system
         std::vector<Order> getMatchingOrders(const Order& order) const;
 
-        // this is a test line
-        // this is a ntoher test!!
+        // DECIDE ON THE STRUCTURE OF THE ORDERBOOK
+        std::unordered_map<int, Order> orders;
+        std::vector<PriceLevel> bidLevels; // Buy
+        std::vector<PriceLevel> askLevels; // Sell
+
+        // Varibles
+        static int currentOrderId;
 
     private:
-        struct OrderComparator {
-            bool operator()(const Order& lhs, const Order& rhs) const {
-                if (lhs.price == rhs.price) {
-                    // For orders with the same price, prioritize the older one
-                    return lhs.timestamp < rhs.timestamp;
-                }
-                // For different prices, prioritize based on order type
-                return (lhs.type == Type::Buy) ? (lhs.price > rhs.price) : (lhs.price < rhs.price);
-            }
-        };
-        using OrderMap = std::unordered_map<std::string, std::multiset<Order, OrderComparator>>;
-
-        OrderMap buyOrdersMap;   // Hashmap of Buy Order for specific product
-        OrderMap sellOrdersMap;  // Hashmap of Sell Order for specific product
+    
 
 };
