@@ -61,3 +61,58 @@ TEST(OrderBookTest, IncrementOrderId) {
     }
 
 }
+
+TEST(OrderBookTest, InsertOrders) {
+    OrderBook orderBook;
+
+    {
+        // No order inserted into OrderBook
+        auto orderFound = orderBook.lookupOrder(1);
+
+        // We expect a nullptr
+        EXPECT_EQ(orderFound, nullptr);
+    }
+    
+    {
+        // Define and inster Order into OrderBook
+        Order entry1(1, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 1, 1);
+        orderBook.insertOrder(entry1, 1, Type::Ask);
+
+        // Lookup order in memory using ptr
+        int orderId = 1;
+        auto orderFound = orderBook.lookupOrder(orderId);
+
+        // OrderId of orderFound expected to be 1
+        EXPECT_EQ(orderFound->orderId, orderId);
+    }
+
+    // {
+    //     for (int i = 0; i)
+    // }
+}
+
+TEST(OrderBookTest, TestStats) {
+    OrderBook orderBook;
+
+    // Define stat varibales
+    double highPrice = 3;
+    double lowPrice = 1;
+    double avgPrice = 2;
+    double spread = 2;
+
+    // Init Order entries
+    Order entry1(1, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", lowPrice, 1);
+    Order entry2(2, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", avgPrice, 1);
+    Order entry3(3, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", highPrice, 1);
+
+    // Insert orders into OrderBook
+    orderBook.insertOrder(entry1, lowPrice, Type::Ask);
+    orderBook.insertOrder(entry2, avgPrice, Type::Ask);
+    orderBook.insertOrder(entry3, highPrice, Type::Ask);
+
+    // Assert values from high, low, avg and spread
+    EXPECT_EQ(orderBook.getHighPrice(orderBook.askLevels), 3);
+    EXPECT_EQ(orderBook.getLowPrice(orderBook.askLevels), lowPrice);
+    EXPECT_EQ(orderBook.getHighPrice(orderBook.askLevels) - OrderBook::getLowPrice(orderBook.askLevels), spread);
+    EXPECT_EQ(orderBook.getAvgPrice(orderBook.askLevels), avgPrice);
+}

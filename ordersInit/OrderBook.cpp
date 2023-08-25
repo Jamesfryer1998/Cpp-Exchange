@@ -1,6 +1,9 @@
 #include "ordersInit/OrderBook.h"
 
 int OrderBook::currentOrderId = 0;
+std::unordered_map<int, Order> OrderBook::orders;
+std::vector<PriceLevel> OrderBook::bidLevels;
+std::vector<PriceLevel> OrderBook::askLevels;
 
 OrderBook::OrderBook(){
 
@@ -39,7 +42,7 @@ void OrderBook::updateOrder(int orderId, double newProductAmount) {
             }
         }
     }
-}
+};
 
 void OrderBook::deleteOrder(int orderId) {
     auto it = orders.find(orderId);
@@ -61,7 +64,7 @@ void OrderBook::deleteOrder(int orderId) {
             }
         }
     }
-}
+};
 
 Order* OrderBook::lookupOrder(int orderId) {
     if (orders.find(orderId) != orders.end()) {
@@ -69,4 +72,4 @@ Order* OrderBook::lookupOrder(int orderId) {
     } else {
         return nullptr;
     }
-}
+};
