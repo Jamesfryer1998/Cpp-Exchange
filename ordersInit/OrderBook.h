@@ -85,6 +85,13 @@ class OrderBook
             currentOrderId = 0;
         };
 
+        static void clearOrderBook() {
+            orders.clear();
+            bidLevels.clear();
+            askLevels.clear();
+            std::cout << "Order book cleared." << std::endl;
+        }
+
     private:
         // Varibles
         static int currentOrderId;

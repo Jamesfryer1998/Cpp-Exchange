@@ -86,9 +86,106 @@ TEST(OrderBookTest, InsertOrders) {
         EXPECT_EQ(orderFound->orderId, orderId);
     }
 
-    // {
-    //     for (int i = 0; i)
-    // }
+    orderBook.clearOrderBook();
+
+    {
+        // Testing large amount of insertions
+        int correctCount = 0;
+
+        for (int i = 0; i < 1000; i++){
+            Order entry1(i, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 1, 1);
+            orderBook.insertOrder(entry1, 1, Type::Ask);
+
+            auto orderFound = orderBook.lookupOrder(i);
+
+            if (orderFound->orderId == i) correctCount++;
+        }
+
+        EXPECT_EQ(correctCount, 1000);
+    }
+}
+
+TEST(OrderBookTest, UpdateOrders) {
+    OrderBook orderBook;
+
+    {
+        // Create and insert order into orderbook
+        Order entry1(1, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 1, 1);
+        orderBook.insertOrder(entry1, 1, Type::Ask);
+
+        // Update the order amount to 2
+        orderBook.updateOrder(1, 2);
+
+        // Get new order amount
+        double newOrderAmount = orderBook.lookupOrder(1)->amount;
+
+        // Expected to be 2
+        EXPECT_EQ(newOrderAmount, 2);
+    }
+
+    {
+        // Create and insert multiple order into orderbook
+        Order entry1(1, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 1, 1);
+        Order entry2(2, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 2, 1);
+        Order entry3(3, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 3, 1);
+
+        orderBook.insertOrder(entry1, 1, Type::Ask);
+        orderBook.insertOrder(entry2, 2, Type::Ask);
+        orderBook.insertOrder(entry3, 3, Type::Ask);
+
+        // Update the order amount to 2
+        orderBook.updateOrder(2, 10);
+
+        // Get new order amount
+        double newOrderAmount = orderBook.lookupOrder(2)->amount;
+
+        // Expected to be 2
+        EXPECT_EQ(newOrderAmount, 10);
+    }
+
+}
+
+TEST(OrderBookTest, DeleteOrders) {
+    OrderBook orderBook;
+
+    {        
+        // Create and insert multiple order into orderbook
+        Order entry1(1, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 1, 1);
+        Order entry2(2, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 2, 1);
+        Order entry3(3, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 3, 1);
+
+        orderBook.insertOrder(entry1, 1, Type::Ask);
+        orderBook.insertOrder(entry2, 2, Type::Ask);
+        orderBook.insertOrder(entry3, 3, Type::Ask);
+
+        // Delete order 2 from ord;erbook
+        orderBook.deleteOrder(2);
+
+        // Check if order exists
+        auto order = orderBook.lookupOrder(2);
+
+        EXPECT_EQ(order, nullptr);
+    }
+
+    {
+        // Checking clear orderbook deletes all orders
+
+        // Create and insert multiple order into orderbook
+        Order entry1(1, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 1, 1);
+        Order entry2(2, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 2, 1);
+        Order entry3(3, "2020/03/17 17:01:24.884492", Type::Ask, "ETH/BTC", 3, 1);
+
+        orderBook.insertOrder(entry1, 1, Type::Ask);
+        orderBook.insertOrder(entry2, 2, Type::Ask);
+        orderBook.insertOrder(entry3, 3, Type::Ask);
+
+        orderBook.clearOrderBook();
+
+        EXPECT_EQ(orderBook.lookupOrder(1), nullptr);
+        EXPECT_EQ(orderBook.lookupOrder(2), nullptr);
+        EXPECT_EQ(orderBook.lookupOrder(3), nullptr);
+
+    }
 }
 
 TEST(OrderBookTest, TestStats) {

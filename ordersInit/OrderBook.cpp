@@ -17,7 +17,7 @@ void OrderBook::insertOrder(const Order& order, double price, Type type){
         bidLevels.push_back(newPriceLevel); // If type is Bid, add to bidLevel
     } else if (type == Type::Ask)
     {
-        askLevels.push_back(newPriceLevel); // If type is Bid, add to askLevel
+        askLevels.push_back(newPriceLevel); // If type is Ask, add to askLevel
     }
 };
 
