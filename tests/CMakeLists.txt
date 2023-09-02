@@ -1,2 +1,3 @@
 include(GoogleTest)
-add_subdirectory(OrderTest)
+add_subdirectory(orderTest)
+add_subdirectory(userTest)

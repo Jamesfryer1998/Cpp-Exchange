@@ -1,5 +1,15 @@
 #include <iostream>
+#include "usersInit/User.h"
 
-int main(int, char**){
-    std::cout << "Hello, from exchange!\n";
-}
+using namespace std;
+
+User::User(int _userId,
+           string _firstName,
+           string _lastName)
+
+    : userId(_userId),
+      firstName(_firstName),
+      lastName(_lastName)
+{
+
+};

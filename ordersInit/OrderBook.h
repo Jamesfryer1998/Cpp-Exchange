@@ -26,6 +26,7 @@ class OrderBook
         static std::unordered_map<int, Order> orders;
         static std::vector<PriceLevel> bidLevels; // Buy
         static std::vector<PriceLevel> askLevels; // Sell
+        std::unordered_map<int, int> userOrderReference;
 
         // Getter
         static int getCurrentOrderId(){

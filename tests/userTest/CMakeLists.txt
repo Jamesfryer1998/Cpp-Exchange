@@ -1,0 +1,6 @@
+file(GLOB SOURCES *.cpp)
+add_executable(test-user ${SOURCES})
+target_link_libraries(test-user gtest_main)
+target_link_libraries(test-user usersInit)
+include(GoogleTest)
+gtest_discover_tests(test-user)

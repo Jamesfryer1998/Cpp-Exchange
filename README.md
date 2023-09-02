@@ -13,6 +13,10 @@ To run the project:
 ```
 ./build/main/main
 ```
+To run tests:
+```
+ctest --test-dir build --output-on-failure
+```
 
 ### Create a new git branch
 ```
