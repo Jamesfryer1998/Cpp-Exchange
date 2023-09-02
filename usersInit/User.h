@@ -19,6 +19,14 @@ class User{
             return userId;
         }
 
+        auto getFirstName() {
+            return firstName;
+        }
+
+        auto getLastName() {
+            return lastName;
+        }
+
         // setters
         void setFirstName(const std::string& newFirstName){
             firstName = newFirstName;
