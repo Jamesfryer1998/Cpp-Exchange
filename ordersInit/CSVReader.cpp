@@ -16,14 +16,15 @@ std::vector<Order> CSVReader::readCSV(std::string fileName)
     std::ifstream csvFile{fileName};
     std::string line;
     std::vector<std::string> tokens;
+    CSVReader csv;
 
+    
     if (csvFile.is_open())
     {
         std::cout << "File open." << std::endl;
         while (std::getline(csvFile, line))
         {
             try{
-                CSVReader csv;
                 Order OBE = csv.csvStringToOBE(tokenise(line, ','));
                 entries.push_back(OBE);
             }catch(const std::exception& e)

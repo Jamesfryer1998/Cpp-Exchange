@@ -42,5 +42,4 @@ class User{
         std::string firstName;
         std::string lastName;
         std::unordered_map<int, int> userOrders;
-
 };

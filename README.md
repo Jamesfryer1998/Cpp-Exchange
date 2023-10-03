@@ -11,7 +11,7 @@ cmake --build build
 ```
 To run the project:
 ```
-./build/main/main
+./build/main/exchange-app
 ```
 To run tests:
 ```
