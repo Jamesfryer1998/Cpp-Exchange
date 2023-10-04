@@ -21,3 +21,22 @@ void Interface::printMenu()
     std::cout << "==================\n" << std::endl;
     // std::cout << "Current time: " << currentTime << std::endl;
 }
+
+void Interface::printStats(std::string type){
+    if (type == "User")
+    {
+        Interface::printUserStats();
+    }
+    else if (type == "Exchange")
+    {
+        Interface::printExchangeStats();
+    }
+}
+
+void Interface::printUserStats(){
+    std::cout << "This is the Users Stats" << std::endl;
+}
+
+void Interface::printExchangeStats(){
+    std::cout << "This is the Exchange Stats" << std::endl;
+}
