@@ -23,7 +23,7 @@ ctest --test-dir build --output-on-failure
 git checkout -b branch_name
 git push origin branch_name
 git commit -a "commit your changes"
-git push --set-upstream origin OrderBook
+git push --set-upstream origin branch_name
 ```
 
 ### Merge to main branch

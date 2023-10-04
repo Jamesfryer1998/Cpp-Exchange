@@ -1,7 +1,12 @@
 #include <iostream>
+#include <string>
 #include <interface/Interface.h>
 
 Interface::Interface(){
+
+}
+
+void Interface::Init(){
 
 }
 
@@ -22,6 +27,26 @@ void Interface::printMenu()
     // std::cout << "Current time: " << currentTime << std::endl;
 }
 
+void Interface::invalidChoice(){
+    std::cout << "Invalid Choice. Please seletct a number from 1-6." << std::endl;
+}
+
+int Interface::getUserInput(){
+    int userInput;
+    std::string line;
+    std::getline(std::cin, line);
+    try{
+        userInput = std::stoi(line);
+    }catch(const std::exception& e)
+    {
+        throw(e);
+    }
+
+    std::cout << "\nOption: " << userInput << " Selected." << std::endl;
+    return userInput;
+
+}
+
 void Interface::printStats(std::string type){
     if (type == "User")
     {
@@ -40,3 +65,4 @@ void Interface::printUserStats(){
 void Interface::printExchangeStats(){
     std::cout << "This is the Exchange Stats" << std::endl;
 }
+

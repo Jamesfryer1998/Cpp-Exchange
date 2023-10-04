@@ -1,18 +1,19 @@
 #pragma once 
-
 #include <iostream>
 
 class Interface{
     public:
         Interface();
+        void Init();
+
         static void printMenu();
-        void printStats(std::string type);
-        void printUserStats();
-        void printExchangeStats();
-
-
+        static void printStats(std::string type);
+        static void printUserStats();
+        static void printExchangeStats();
+        void invalidChoice();
 
     private:
+        int getUserInput();
 
 
 };

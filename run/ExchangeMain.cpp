@@ -7,5 +7,5 @@ ExchangeMain::ExchangeMain(){
 
 void ExchangeMain::init(){
     Interface::printMenu();
-
+    Interface::printStats("Exchange");
 }
