@@ -1,5 +1,7 @@
 #include <gtest/gtest.h>
 #include "ordersInit/CSVReader.h"
+#include <ordersInit/Order.h>
+#include <ordersInit/OrderBook.h>
 
 TEST(CSVReaderTest, BasicAssertions) {
     CSVReader reader;
@@ -47,5 +49,21 @@ TEST(CSVReaderTest, BasicAssertions) {
         EXPECT_EQ(tokens.size(), 2);
         EXPECT_EQ(tokens[0], "test1");
         EXPECT_EQ(tokens[1], " test2");
+    }
+}
+
+TEST(CSVReaderTest, LoadOrders) {
+    CSVReader reader;
+    std::unordered_map<int, Order> orders = reader.readCSV("/Users/james/Projects/exchange/20200317.csv");
+
+    {
+        // The number of all orders should be equal to 3540 (the number of rows in the CSV)
+        EXPECT_EQ(orders.size(), 3540);
+    }
+
+    {
+        auto test = orders.find(10);
+        
+        EXPECT_EQ(test->first, 10);
     }
 }

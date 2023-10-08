@@ -6,6 +6,6 @@ ExchangeMain::ExchangeMain(){
 }
 
 void ExchangeMain::init(){
-    Interface::printMenu();
-    Interface::printStats("Exchange");
+    interface.Init();
+    orderbook.loadOrderBook("20200317.csv");
 }

@@ -1,4 +1,5 @@
 #include "ordersInit/OrderBook.h"
+#include <ordersInit/CSVReader.h>
 
 int OrderBook::currentOrderId = 0;
 std::unordered_map<int, Order> OrderBook::orders;
@@ -8,6 +9,10 @@ std::vector<PriceLevel> OrderBook::askLevels;
 OrderBook::OrderBook(){
 
 };
+
+void OrderBook::loadOrderBook(std::string fileName){
+    orders = CSVReader::readCSV(fileName);
+}
 
 void OrderBook::insertOrder(const Order& order, double price, Type type){
     orders[order.orderId] = order;

@@ -9,7 +9,7 @@ class CSVReader{
         CSVReader();
 
         // CSV Input Operations
-        static std::vector<Order> readCSV(std::string fileName);
+        static std::unordered_map<int, Order> readCSV(std::string fileName);
         static std::vector<std::string> tokenise(std::string csvline, char seperator);
         static Order stringToOBE(std::string timestamp,
                                  std::string product, 

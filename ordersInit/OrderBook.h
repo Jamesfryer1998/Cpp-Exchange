@@ -14,6 +14,7 @@ class OrderBook
         OrderBook();
 
         // OrderBook Methods
+        void loadOrderBook(std::string fileName);
         static void insertOrder(const Order& order, double price, Type type); // If type == sell/buy
         static void updateOrder(int orderId, double newProductAmount);
         static void deleteOrder(int orderId);

@@ -10,31 +10,33 @@ CSVReader::CSVReader()
 
 }
 
-std::vector<Order> CSVReader::readCSV(std::string fileName)
+std::unordered_map<int, Order> CSVReader::readCSV(std::string fileName)
 {
-    std::vector<Order> entries;
+    std::unordered_map<int, Order> entries;
     std::ifstream csvFile{fileName};
     std::string line;
     std::vector<std::string> tokens;
+    int count = 0; // Map starts at 0
+    int badEntryCount = 0;
     CSVReader csv;
-
     
     if (csvFile.is_open())
     {
-        std::cout << "File open." << std::endl;
         while (std::getline(csvFile, line))
         {
             try{
                 Order OBE = csv.csvStringToOBE(tokenise(line, ','));
-                entries.push_back(OBE);
+                entries.insert({count++, OBE});
             }catch(const std::exception& e)
             {
+                badEntryCount++;
                 // std::cout << "CSVReader::readCSV bad data processed"  << std::endl;
             }
         }
     }
 
-    std::cout << "CSVReader::readCSV read" << entries.size() << "files" << std::endl;
+    std::cout << entries.size() << " orders loaded successfully.\n" << badEntryCount << " orders loaded unsucessfully" << std::endl;
+    
     return entries;
 }
 

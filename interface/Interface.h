@@ -1,6 +1,7 @@
 #pragma once 
 #include <iostream>
 
+
 class Interface{
     public:
         Interface();
@@ -14,6 +15,5 @@ class Interface{
 
     private:
         int getUserInput();
-
 
 };
