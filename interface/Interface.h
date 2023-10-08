@@ -12,6 +12,8 @@ class Interface{
         static void printUserStats();
         static void printExchangeStats();
         void invalidChoice();
+        void processUserInput(int userInput);
+        void ExchangeStatus();
 
     private:
         int getUserInput();

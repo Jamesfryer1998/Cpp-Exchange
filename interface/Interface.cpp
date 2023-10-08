@@ -7,15 +7,20 @@ Interface::Interface(){
 }
 
 void Interface::Init(){
-    
+    system("clear");
+    int userInput;
+    printMenu();
+
+    while (true){
+        userInput = getUserInput();
+        processUserInput(userInput);
+    }
 }
 
 void Interface::printMenu()
 {
-    system("clear");
     std::cout << "Welcome to the Fastest C++ Exchange out there!" << std::endl;
     std::cout << "Please choose from one of the options below:" << std::endl;
-
     std::cout << "\n==================" << std::endl;
     std::cout << "1: Account Stats" << std::endl; 
     std::cout << "2: Exchange Stats" << std::endl; 
@@ -35,6 +40,7 @@ int Interface::getUserInput(){
     int userInput;
     std::string line;
     std::getline(std::cin, line);
+    
     try{
         userInput = std::stoi(line);
     }catch(const std::exception& e)
@@ -66,3 +72,48 @@ void Interface::printExchangeStats(){
     std::cout << "This is the Exchange Stats" << std::endl;
 }
 
+void Interface::ExchangeStatus(){
+    
+}
+
+void Interface::processUserInput(int userInput){
+    if (userInput == 0) // bad input
+    {
+        invalidChoice();
+    }
+
+    if (userInput == 1)
+    {
+        printStats("User");
+    }
+
+    if (userInput == 2)
+    {
+        printStats("Exchange");
+    }
+
+    if (userInput == 3)
+    {
+        // MerkelMain::makeAsk();
+    }
+
+    if (userInput == 4)
+    {
+        // MerkelMain::makeBid();
+    }
+
+    if (userInput == 5)
+    {
+        // MerkelMain::walletState();
+    }
+
+    if (userInput == 6)
+    {
+        // MerkelMain::processTrade();
+    }
+
+    if (userInput > 7) // bad input
+    {
+        invalidChoice();
+    }
+}
