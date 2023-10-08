@@ -1,0 +1,6 @@
+file(GLOB SOURCES *.cpp)
+add_executable(test-interface ${SOURCES})
+target_link_libraries(test-interface gtest_main)
+target_link_libraries(test-interface interface)
+include(GoogleTest)
+gtest_discover_tests(test-interface)
