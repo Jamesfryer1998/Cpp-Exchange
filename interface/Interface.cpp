@@ -6,7 +6,7 @@
 
 Interface::Interface(){
     
-}
+};
 
 void Interface::Init(){
     system("clear");
@@ -17,7 +17,7 @@ void Interface::Init(){
         userInput = getUserInput();
         processUserInput(userInput);
     }
-}
+};
 
 void Interface::printMenu()
 {
@@ -32,7 +32,7 @@ void Interface::printMenu()
     std::cout << "6: Exchange Status" << std::endl; 
     std::cout << "==================\n" << std::endl;
     // std::cout << "Current time: " << currentTime << std::endl;
-}
+};
 
 int Interface::getUserInput(){
     int userInput;
@@ -46,10 +46,10 @@ int Interface::getUserInput(){
         throw(e);
     }
 
-    // std::cout << "\nOption: " << userInput << " Selected." << std::endl;
+    std::cout << "\nOption: " << userInput << " Selected." << std::endl;
     return userInput;
 
-}
+};
 
 void Interface::printStats(std::string type){
     if (type == "User")
@@ -60,14 +60,14 @@ void Interface::printStats(std::string type){
     {
         Interface::printExchangeStats();
     }
-}
+};
 
 void Interface::printUserStats(){
     std::cout << "This is the Users Stats." << std::endl;
     std::cout << "Username: X" << std::endl;
     std::cout << "Wallet amount: X" << std::endl;
     std::cout << "Trade count: X" << std::endl;
-}
+};
 
 void Interface::printExchangeStats(){
     std::cout << "This is the Exchange Stats." << std::endl;
@@ -75,15 +75,15 @@ void Interface::printExchangeStats(){
     std::cout << "OrderBook size: X" << std::endl;
     std::cout << "OrderBook Data Range: X" << std::endl;
     std::cout << "Total Trade count: X" << std::endl;
-}
+};
 
 void Interface::ExchangeStatus(){
     std::cout << "Info about the Exchange (uptime etc, will go here)" << std::endl;
-}
+};
 
 void Interface::invalidChoice(){
     std::cout << "Invalid Choice. Please seletct a number from 1-6." << std::endl;
-}
+};
 
 void Interface::makeAsk() {
     std::string to;
@@ -108,16 +108,20 @@ void Interface::makeAsk() {
     std::cout << "Is " << product << " correct? [y/n]" << std::endl;
     std::getline(std::cin, correct);
 
+    // do a product check
+    // This will involve the order book,
+
     if(correct == "y")
     {
         // proceed to make a Ask using the matching system
+        std::cout << "Matcing your order, please wait..." << std::endl;
     }
     else{ makeAsk(); } // Recursively restart the process
-}
+};
 
 void Interface::makeBid(){
     
-}
+};
 
 void Interface::processUserInput(int userInput){
     if (userInput == 0) // bad input
@@ -159,4 +163,4 @@ void Interface::processUserInput(int userInput){
     {
         invalidChoice();
     }
-}
+};

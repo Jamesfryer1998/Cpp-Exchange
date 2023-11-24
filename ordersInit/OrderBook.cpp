@@ -78,3 +78,8 @@ Order* OrderBook::lookupOrder(int orderId) {
         return nullptr;
     }
 };
+
+bool OrderBook::checkProduct(std::string product){
+    // Check if the product is in the OrderBook
+    return true;
+};

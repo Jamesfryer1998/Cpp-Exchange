@@ -5,7 +5,6 @@
 #include <iostream>
 #include <fstream>
 #include <algorithm>
-#include <cctype>    // for ::toupper
 #include <string>
 
 CSVReader::CSVReader()

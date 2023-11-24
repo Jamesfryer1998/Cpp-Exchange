@@ -19,6 +19,7 @@ class OrderBook
         static void updateOrder(int orderId, double newProductAmount);
         static void deleteOrder(int orderId);
         Order* lookupOrder(int orderId);
+        bool checkProduct(std::string);
 
         // Matching system
         std::vector<Order> getMatchingOrders(const Order& order) const;
