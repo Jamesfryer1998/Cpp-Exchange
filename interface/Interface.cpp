@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <interface/Interface.h>
+#include <ordersInit/CSVReader.h>
+#include <exchangeInit/MatchingSystem.h>
 
 Interface::Interface(){
     
@@ -32,10 +34,6 @@ void Interface::printMenu()
     // std::cout << "Current time: " << currentTime << std::endl;
 }
 
-void Interface::invalidChoice(){
-    std::cout << "Invalid Choice. Please seletct a number from 1-6." << std::endl;
-}
-
 int Interface::getUserInput(){
     int userInput;
     std::string line;
@@ -48,7 +46,7 @@ int Interface::getUserInput(){
         throw(e);
     }
 
-    std::cout << "\nOption: " << userInput << " Selected." << std::endl;
+    // std::cout << "\nOption: " << userInput << " Selected." << std::endl;
     return userInput;
 
 }
@@ -65,14 +63,59 @@ void Interface::printStats(std::string type){
 }
 
 void Interface::printUserStats(){
-    std::cout << "This is the Users Stats" << std::endl;
+    std::cout << "This is the Users Stats." << std::endl;
+    std::cout << "Username: X" << std::endl;
+    std::cout << "Wallet amount: X" << std::endl;
+    std::cout << "Trade count: X" << std::endl;
 }
 
 void Interface::printExchangeStats(){
-    std::cout << "This is the Exchange Stats" << std::endl;
+    std::cout << "This is the Exchange Stats." << std::endl;
+    std::cout << "Number of Users: X" << std::endl;
+    std::cout << "OrderBook size: X" << std::endl;
+    std::cout << "OrderBook Data Range: X" << std::endl;
+    std::cout << "Total Trade count: X" << std::endl;
 }
 
 void Interface::ExchangeStatus(){
+    std::cout << "Info about the Exchange (uptime etc, will go here)" << std::endl;
+}
+
+void Interface::invalidChoice(){
+    std::cout << "Invalid Choice. Please seletct a number from 1-6." << std::endl;
+}
+
+void Interface::makeAsk() {
+    std::string to;
+    std::string from;
+    std::string correct;
+    std::string product;
+    
+    std::cout << "\nTo make an Ask enter the details below:" << std::endl;
+    
+    // Prompt for "To" and "From" on the same line
+    std::cout << "To: ";
+    std::getline(std::cin, to);
+    
+    std::cout << "From: ";
+    std::getline(std::cin, from);
+
+    product = CSVReader::productFormat(
+        CSVReader::toUpperCase(to),
+        CSVReader::toUpperCase(from)
+    );
+
+    std::cout << "Is " << product << " correct? [y/n]" << std::endl;
+    std::getline(std::cin, correct);
+
+    if(correct == "y")
+    {
+        // proceed to make a Ask using the matching system
+    }
+    else{ makeAsk(); } // Recursively restart the process
+}
+
+void Interface::makeBid(){
     
 }
 
@@ -94,12 +137,12 @@ void Interface::processUserInput(int userInput){
 
     if (userInput == 3)
     {
-        // MerkelMain::makeAsk();
+        makeAsk();
     }
 
     if (userInput == 4)
     {
-        // MerkelMain::makeBid();
+        makeBid();
     }
 
     if (userInput == 5)
@@ -109,7 +152,7 @@ void Interface::processUserInput(int userInput){
 
     if (userInput == 6)
     {
-        // MerkelMain::processTrade();
+        ExchangeStatus();
     }
 
     if (userInput > 7) // bad input

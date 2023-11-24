@@ -20,8 +20,10 @@ endif()
 
 project(exchange)
 set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra")
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
+
 enable_testing()
+
 add_subdirectory(main)
 add_subdirectory(run)
 add_subdirectory(interface)

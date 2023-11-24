@@ -17,5 +17,7 @@ class Interface{
 
     private:
         int getUserInput();
+        void makeAsk();
+        void makeBid();
 
 };

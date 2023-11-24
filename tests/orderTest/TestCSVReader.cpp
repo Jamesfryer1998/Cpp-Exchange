@@ -67,3 +67,14 @@ TEST(CSVReaderTest, LoadOrders) {
         EXPECT_EQ(test->first, 10);
     }
 }
+
+TEST(CSVReaderTest, UpperCase) {
+    CSVReader reader;
+
+    {
+        std::string str = reader.toUpperCase("test");
+
+        EXPECT_STREQ("TEST", str.c_str());
+    }
+
+}

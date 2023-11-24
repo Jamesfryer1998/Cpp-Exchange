@@ -4,6 +4,9 @@
 
 #include <iostream>
 #include <fstream>
+#include <algorithm>
+#include <cctype>    // for ::toupper
+#include <string>
 
 CSVReader::CSVReader()
 {
@@ -125,4 +128,13 @@ Order CSVReader::stringToOBE(std::string timestamp,
                 price,
                 amount  };
     return OBE;
+}
+
+std::string CSVReader::toUpperCase(std::string string){
+    std::transform(string.begin(), string.end(), string.begin(), ::toupper);
+    return string;
+}
+
+std::string CSVReader::productFormat(std::string prod1, std::string prod2){
+    return prod1 + "/" + prod2;
 }
