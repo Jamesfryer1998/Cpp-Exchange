@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include <interface/Interface.h>
+#include <ordersInit/Order.h>
+#include <ordersInit/OrderBook.h>
 #include <ordersInit/CSVReader.h>
 #include <exchangeInit/MatchingSystem.h>
 
@@ -8,7 +10,8 @@ Interface::Interface(){
     
 };
 
-void Interface::Init(){
+void Interface::Init(OrderBook orderBook){
+    Interface::orderBook = orderBook;
     system("clear");
     int userInput;
     printMenu();
@@ -26,10 +29,9 @@ void Interface::printMenu()
     std::cout << "\n==================" << std::endl;
     std::cout << "1: Account Stats" << std::endl; 
     std::cout << "2: Exchange Stats" << std::endl; 
-    std::cout << "3: Make A Ask" << std::endl; 
-    std::cout << "4: Make A Bid" << std::endl; 
-    std::cout << "5: Wallet" << std::endl; 
-    std::cout << "6: Exchange Status" << std::endl; 
+    std::cout << "3: Submit an Order" << std::endl; 
+    std::cout << "4: Wallet Stats" << std::endl; 
+    std::cout << "5: Exchange Status" << std::endl; 
     std::cout << "==================\n" << std::endl;
     // std::cout << "Current time: " << currentTime << std::endl;
 };
@@ -82,22 +84,46 @@ void Interface::ExchangeStatus(){
 };
 
 void Interface::invalidChoice(){
-    std::cout << "Invalid Choice. Please seletct a number from 1-6." << std::endl;
+    std::cout << "Invalid Choice. Please seletct a number from 1-5." << std::endl;
 };
 
-void Interface::makeAsk() {
+void Interface::makeOrder() {
     std::string to;
     std::string from;
-    std::string correct;
     std::string product;
-    
-    std::cout << "\nTo make an Ask enter the details below:" << std::endl;
+    std::string orderTypeInput;
+
+    std::cout << "ASK - 1" << std::endl;
+    std::cout << "BID - 2" << std::endl;
+    std::cout << "\nWould you like to make a ASK or BID." << std::endl;
+    std::getline(std::cin, orderTypeInput);
+
+    try{
+        if(std::stoi(orderTypeInput) == 1)
+        {
+            // Type orderType = Type::Ask; // User enters ask
+        }
+        else if (std::stoi(orderTypeInput) == 2)
+        {
+            // Type orderType = Type::Bid; // User enters bid
+        }
+        else
+        {
+            makeOrder();                // User enters undefined
+        };
+
+    }catch(const std::exception& e)
+    {
+        throw(e);
+    }
+
+    std::cout << "\nPlease enter the details below:" << std::endl;
     
     // Prompt for "To" and "From" on the same line
-    std::cout << "To: ";
+    std::cout << "To symbol: ";
     std::getline(std::cin, to);
     
-    std::cout << "From: ";
+    std::cout << "From symbol: ";
     std::getline(std::cin, from);
 
     product = CSVReader::productFormat(
@@ -105,22 +131,14 @@ void Interface::makeAsk() {
         CSVReader::toUpperCase(from)
     );
 
-    std::cout << "Is " << product << " correct? [y/n]" << std::endl;
-    std::getline(std::cin, correct);
-
     // do a product check
     // This will involve the order book,
-
-    if(correct == "y")
-    {
-        // proceed to make a Ask using the matching system
-        std::cout << "Matcing your order, please wait..." << std::endl;
+    if(!orderBook.lookupProduct(product)) {
+        std::cout << product << " not found in order book." << std::endl;
+        makeOrder();
     }
-    else{ makeAsk(); } // Recursively restart the process
-};
 
-void Interface::makeBid(){
-    
+    std::cout << "Matcing your order, please wait..." << std::endl;
 };
 
 void Interface::processUserInput(int userInput){
@@ -141,25 +159,20 @@ void Interface::processUserInput(int userInput){
 
     if (userInput == 3)
     {
-        makeAsk();
+        makeOrder();
     }
 
     if (userInput == 4)
     {
-        makeBid();
+        // MerkelMain::walletState();
     }
 
     if (userInput == 5)
     {
-        // MerkelMain::walletState();
-    }
-
-    if (userInput == 6)
-    {
         ExchangeStatus();
     }
 
-    if (userInput > 7) // bad input
+    if (userInput > 6) // bad input
     {
         invalidChoice();
     }

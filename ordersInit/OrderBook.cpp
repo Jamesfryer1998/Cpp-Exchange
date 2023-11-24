@@ -12,6 +12,7 @@ OrderBook::OrderBook(){
 
 void OrderBook::loadOrderBook(std::string fileName){
     orders = CSVReader::readCSV(fileName);
+    updateProductList();
 }
 
 void OrderBook::insertOrder(const Order& order, double price, Type type){
@@ -26,7 +27,7 @@ void OrderBook::insertOrder(const Order& order, double price, Type type){
     }
 };
 
-void OrderBook::updateOrder(int orderId, double newProductAmount) {
+void OrderBook::updateOrder(int orderId, double newProductAmount){
     auto it = orders.find(orderId);
     if (it != orders.end()) {
         Order& order = it->second;
@@ -79,7 +80,23 @@ Order* OrderBook::lookupOrder(int orderId) {
     }
 };
 
-bool OrderBook::checkProduct(std::string product){
-    // Check if the product is in the OrderBook
-    return true;
+void OrderBook::updateProductList(){
+    // Function to update the product list
+        for (const auto& pair : orders) {
+            const Order& order = pair.second;
+            // Check if the product is in the product list
+            auto it = std::find(productList.begin(), productList.end(), order.product);
+            if (it == productList.end()) {
+                // Product not found in the list, add it
+                productList.push_back(order.product);
+            }
+        }
+};
+
+bool OrderBook::lookupProduct(std::string product){
+    auto it = std::find(productList.begin(), productList.end(), product);
+    if (it == productList.end()) {
+        return false;
+    }
+    else { return true; }   
 };

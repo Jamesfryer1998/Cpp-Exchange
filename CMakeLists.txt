@@ -19,7 +19,7 @@ if(DEFINED ENV{CONDA_PREFIX} AND NOT DEFINED ENV{CONDA_BUILD})
 endif()
 
 project(exchange)
-set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra")
+set(CMAKE_CXX_FLAGS "-Wall -Werror -Wextra -Wunused-parameter")
 set(CMAKE_CXX_STANDARD 23)
 
 enable_testing()

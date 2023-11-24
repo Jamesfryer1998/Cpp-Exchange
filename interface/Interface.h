@@ -1,11 +1,12 @@
 #pragma once 
 #include <iostream>
+#include <ordersInit/OrderBook.h>
 
 
 class Interface{
     public:
         Interface();
-        void Init();
+        void Init(OrderBook orderBook);
 
         static void printMenu();
         static void printStats(std::string type);
@@ -17,7 +18,8 @@ class Interface{
 
     private:
         int getUserInput();
-        void makeAsk();
-        void makeBid();
+        void makeOrder();
+
+        OrderBook orderBook;
 
 };

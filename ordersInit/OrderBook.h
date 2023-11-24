@@ -1,3 +1,5 @@
+#pragma once
+
 #include "ordersInit/Order.h"
 #include <set>
 
@@ -19,13 +21,15 @@ class OrderBook
         static void updateOrder(int orderId, double newProductAmount);
         static void deleteOrder(int orderId);
         Order* lookupOrder(int orderId);
-        bool checkProduct(std::string);
+        void updateProductList();
+        bool lookupProduct(std::string);
 
         // Matching system
         std::vector<Order> getMatchingOrders(const Order& order) const;
 
         // DECIDE ON THE STRUCTURE OF THE ORDERBOOK
         static std::unordered_map<int, Order> orders;
+        std::vector<std::string> productList; // List is all products
         static std::vector<PriceLevel> bidLevels; // Buy
         static std::vector<PriceLevel> askLevels; // Sell
         std::unordered_map<int, int> userOrderReference;
