@@ -135,5 +135,5 @@ std::string CSVReader::toUpperCase(std::string string){
 }
 
 std::string CSVReader::productFormat(std::string prod1, std::string prod2){
-    return prod1 + "/" + prod2;
+    return toUpperCase(prod1) + "/" + toUpperCase(prod2);
 }

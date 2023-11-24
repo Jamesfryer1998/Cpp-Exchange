@@ -92,6 +92,9 @@ void Interface::makeOrder() {
     std::string from;
     std::string product;
     std::string orderTypeInput;
+    Type orderType = Type::Unknown;
+    std::string prodAmount;
+    std::string prodPrice;
 
     std::cout << "ASK - 1" << std::endl;
     std::cout << "BID - 2" << std::endl;
@@ -101,11 +104,11 @@ void Interface::makeOrder() {
     try{
         if(std::stoi(orderTypeInput) == 1)
         {
-            // Type orderType = Type::Ask; // User enters ask
+            orderType = Type::Ask;       // User enters ask
         }
         else if (std::stoi(orderTypeInput) == 2)
         {
-            // Type orderType = Type::Bid; // User enters bid
+            orderType = Type::Bid;      // User enters bid
         }
         else
         {
@@ -114,35 +117,44 @@ void Interface::makeOrder() {
 
     }catch(const std::exception& e)
     {
-        throw(e);
+        std::cerr << "An error occurred: " << e.what() << std::endl;
     }
 
     std::cout << "\nPlease enter the details below:" << std::endl;
-    
-    // Prompt for "To" and "From" on the same line
+
     std::cout << "To symbol: ";
     std::getline(std::cin, to);
     
     std::cout << "From symbol: ";
     std::getline(std::cin, from);
 
-    product = CSVReader::productFormat(
-        CSVReader::toUpperCase(to),
-        CSVReader::toUpperCase(from)
-    );
+    product = CSVReader::productFormat(to, from);
 
-    // do a product check
-    // This will involve the order book,
     if(!orderBook.lookupProduct(product)) {
         std::cout << product << " not found in order book." << std::endl;
         makeOrder();
     }
 
+    std::cout << "Product Amount: ";
+    std::getline(std::cin, prodAmount);
+
+    std::cout << "Price: ";
+    std::getline(std::cin, prodPrice);
+
     std::cout << "Matcing your order, please wait..." << std::endl;
+
+    MatchingSystem::OrderEnteredByUser(
+        orderBook.getCurrentOrderId(),
+        orderType,
+        product.c_str(),
+        std::stod(prodPrice),
+        std::stod(prodAmount)
+    );
+
 };
 
 void Interface::processUserInput(int userInput){
-    if (userInput == 0) // bad input
+    if (userInput == 0) // Invalid input
     {
         invalidChoice();
     }
@@ -172,7 +184,7 @@ void Interface::processUserInput(int userInput){
         ExchangeStatus();
     }
 
-    if (userInput > 6) // bad input
+    if (userInput > 6) // Invalid input
     {
         invalidChoice();
     }
