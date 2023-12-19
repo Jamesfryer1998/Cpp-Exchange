@@ -8,6 +8,7 @@ class UserManager {
         void createUser(const User& user);
         void updateUser(int userId, const std::string& newFirstName, const std::string& newLastName);
         void deleteUser(int userId);
+        void loadUser();
 
         // getters
         auto getUsers() {

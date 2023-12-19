@@ -12,5 +12,4 @@ class ExchangeMain{
     private:
         OrderBook orderbook;
         Interface interface;
-
 };

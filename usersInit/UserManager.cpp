@@ -21,3 +21,7 @@ void UserManager::updateUser(int userId, const std::string& newFirstName, const 
 void UserManager::deleteUser(int userId){
     users.erase(userId);
 };
+
+void UserManager::loadUser(){
+
+};
